@@ -13,6 +13,7 @@ public class _1SetMatrixZero {
                         if (k != i && arr[k][j] != 0)
                             arr[k][j] = -1;
                     }
+                    // for that row
                     for (int k = 0; k < arr[i].length; k++) {
                         if (k != j && arr[i][k] != 0)
                             arr[i][k] = -1;
@@ -31,8 +32,9 @@ public class _1SetMatrixZero {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++)
                 System.out.print(arr[i][j] + " ");
+            System.out.println();
         }
-        System.out.println();
+        
     }
 
     public static void main(String[] args) throws Exception {
