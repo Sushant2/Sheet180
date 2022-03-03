@@ -82,7 +82,7 @@ public class _1SetMatrixZero {
             for (int j = 1; j < cols; j++) {
                 if (arr[i][j] == 0)
                     // left most col & top most row
-                    arr[i][0] = arr[j][0] = 0;
+                    arr[i][0] = arr[0][j] = 0;
             }
         }
         // now traverse matrix second time(but in reverse...)
