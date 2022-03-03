@@ -72,6 +72,32 @@ public class _1SetMatrixZero {
         display(arr);
     }
 
+    // ! Most Optimised - time comp - O(2*(m*)n), space comp - O(1)
+    public static void setMatZero3(int[][] arr) {
+        // make a var "col0" set to 1 initally to avoid overlapping os arr[0][0]
+        int col0 = 1, rows = arr.length, cols = arr[0].length;
+        for (int i = 0; i < rows; i++) {
+            if (arr[i][0] == 0)
+                col0 = 0;
+            for (int j = 1; j < cols; j++) {
+                if (arr[i][j] == 0)
+                    // left most col & top most row
+                    arr[i][0] = arr[j][0] = 0;
+            }
+        }
+        // now traverse matrix second time(but in reverse...)
+        for (int i = rows - 1; i >= 0; i--) {
+            for (int j = cols - 1; j >= 1; j--) {
+                if (arr[i][0] == 0 || arr[0][j] == 0)
+                    arr[i][j] = 0;
+            }
+            if (col0 == 0)
+                arr[i][0] = 0;
+        }
+
+        display(arr);
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -84,6 +110,7 @@ public class _1SetMatrixZero {
             }
         }
         // setMatZero1(mat);
-        setMatZero2(mat);
+        // setMatZero2(mat);
+        setMatZero3(mat);
     }
 }
