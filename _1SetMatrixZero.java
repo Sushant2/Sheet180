@@ -1,3 +1,5 @@
+// Leetcode 73
+
 import java.util.*;
 import java.io.*;
 
@@ -73,6 +75,8 @@ public class _1SetMatrixZero {
     }
 
     // ! Most Optimised - time comp - O(2*(m*)n), space comp - O(1)
+    // ! instea of taking 2 dummy arays explicitly, we'll take those 2 dummy arrays
+    // !inside the 2d matrix
     public static void setMatZero3(int[][] arr) {
         // make a var "col0" set to 1 initally to avoid overlapping os arr[0][0]
         int col0 = 1, rows = arr.length, cols = arr[0].length;
