@@ -1,4 +1,5 @@
 // Leetcode - 118
+// Leetcode - 119
 
 import java.io.*;
 import java.util.*;
@@ -25,6 +26,16 @@ public class _2PascalTriangle {
         return triangle;
     }
 
+    public static ArrayList<Integer> pascalRow(int n) {
+        ArrayList<Integer> row = new ArrayList<>();
+        long rc0 = 1;
+        for (int c = 0; c < n; c++) {
+            row.add((int) rc0);
+            rc0 = (rc0 * (n - c)) / (c + 1);
+        }
+        return row;
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -34,6 +45,10 @@ public class _2PascalTriangle {
                 System.out.print(result.get(i).get(j) + " ");
             }
             System.out.println();
+        }
+        ArrayList<Integer> row = pascalRow(n);
+        for (int i = 0; i < row.size(); i++) {
+            System.out.print(row.get(i) + " ");
         }
     }
 }
