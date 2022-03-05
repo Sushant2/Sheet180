@@ -4,6 +4,7 @@ import java.util.*;
 import java.io.*;
 
 public class _3NextPermutation {
+    // ! optimised solution - time comp - O(n), space comp - O(1)
     public static void findNextPerm(int[] arr) {
         // edge case - if array is empty or arr has only 1 ele
         if (arr == null || arr.length <= 1)
