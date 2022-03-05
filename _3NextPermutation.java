@@ -4,6 +4,34 @@ import java.util.*;
 import java.io.*;
 
 public class _3NextPermutation {
+    // ! brute force - time comp - O(n!*n), space comp - O(1)
+
+    public static void getAllPerm(int[] arr, int idx, List<List<Integer>> ans) {
+        // base case
+        if (idx == arr.length) {
+            ArrayList<Integer> temp = new ArrayList<>();
+            for (int i = 0; i < arr.length; i++)
+                temp.add(arr[i]);
+            ans.add(new ArrayList<>(temp));
+            return;
+        }
+        // faith
+        for (int i = idx; i < arr.length; i++) {
+            // preorder swap
+            swap(arr, i, idx);
+            // call
+            getAllPerm(arr, idx + 1, ans);
+            // postorder swap to reswap
+            swap(arr, i, idx);
+        }
+    }
+
+    public static void findNextPermBrute(int[] arr) {
+        List<List<Integer>> perm = new ArrayList<>();
+        getAllPerm(arr, 0, perm);
+        
+    }
+
     // ! optimised solution - time comp - O(n), space comp - O(1)
     public static void findNextPerm(int[] arr) {
         // edge case - if array is empty or arr has only 1 ele
