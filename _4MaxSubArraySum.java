@@ -2,6 +2,9 @@ import java.util.*;
 import java.io.*;
 
 public class _4MaxSubArraySum {
+
+    // ! time comp - O(n^3), space - O(1) (that subArr arraylist will always hold only 2
+    // ! ele(indexes) at any given time)
     public static int maxSubArrSumBrute(int[] arr, ArrayList<Integer> subArr) {
         int n = arr.length;
         int maxSum = 0;
