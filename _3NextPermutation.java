@@ -29,8 +29,8 @@ public class _3NextPermutation {
     public static void findNextPermBrute(int[] arr) {
         List<List<Integer>> perm = new ArrayList<>();
         getAllPerm(arr, 0, perm);
-        //now we can do sorting & serch for out arr in perm
-        //return the next permuatation from perm
+        // now we can do sorting & serch for out arr in perm
+        // return the next permuatation from perm
     }
 
     // ! optimised solution - time comp - O(n), space comp - O(1)
