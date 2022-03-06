@@ -49,6 +49,8 @@ public class _4MaxSubArraySum {
         return maxSum;
     }
 
+    //! Most Optimised - Kadane's Algorithm - Linear time
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
