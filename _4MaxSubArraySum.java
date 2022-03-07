@@ -49,7 +49,27 @@ public class _4MaxSubArraySum {
         return maxSum;
     }
 
-    //! Most Optimised - Kadane's Algorithm - Linear time
+    // ! Most Optimised - Kadane's Algorithm - Linear time - O(n)
+    public static int maxSubArrSumKadane(int[] arr, ArrayList<Integer> subArr) {
+        int max_so_far = arr[0], max_end_here = 0;
+        int startIdx = 0;
+        for (int i = 0; i < arr.length; i++) {
+            max_end_here += arr[i];
+            if (max_end_here > max_so_far) {
+                max_so_far = max_end_here;
+                subArr.clear();
+                subArr.add(startIdx);
+                // ending index is itself i, whenever we update the max_so_far
+                subArr.add(i);
+            }
+            if (max_end_here < 0) {
+                max_end_here = 0;
+                // update start index
+                startIdx = i + 1;
+            }
+        }
+        return max_so_far;
+    }
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -61,7 +81,8 @@ public class _4MaxSubArraySum {
             arr[i] = Integer.parseInt(values[i]);
         }
         // int ans = maxSubArrSumBrute(arr, subArr);
-        int ans = maxSubArrSumQuadratic(arr, subArr);
+        // int ans = maxSubArrSumQuadratic(arr, subArr);
+        int ans = maxSubArrSumKadane(arr, subArr);
         System.out.println("Maximum Sub Array Sum is: " + ans);
         System.out.println("The subarray is: ");
         for (int i = subArr.get(0); i <= subArr.get(1); i++)
