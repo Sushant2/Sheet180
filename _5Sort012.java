@@ -25,7 +25,7 @@ public class _5Sort012 {
             arr[k++] = 1;
             count_1--;
         }
-        while (count_0 != 0) {
+        while (count_2 != 0) {
             arr[k++] = 2;
             count_2--;
         }
@@ -68,8 +68,8 @@ public class _5Sort012 {
         int[] arr = new int[n];
         for (int i = 0; i < n; i++)
             arr[i] = Integer.parseInt(values[i]);
-        // sort012Count(arr);
-        sort012DNF(arr);
+        sort012Count(arr);
+        // sort012DNF(arr);
         for (int i : arr)
             System.out.print(i + " ");
     }
