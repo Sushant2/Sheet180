@@ -3,6 +3,9 @@ import java.util.*;
 
 public class _5Sort012 {
 
+    // ! 1st method -just use sorting algo, to sort the array - it'll be ur answer
+    // ! time complexity - O(nlong)
+
     // ! Counting sort - time compl - O(n) + O(n) & space comp - O(1)
     public static void sort012Count(int[] arr) {
         // we'll use count sort - to count no.of 0,1,2
