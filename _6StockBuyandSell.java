@@ -17,6 +17,21 @@ public class _6StockBuyandSell {
         return profit;
     }
 
+    // ! optimised - time comp - O(n), space comp - O(1)
+    // linearly traverse the array & maintain a mini variable on the left side of
+    // array, mini = +inf & profit = 0 (initially)
+    // do profit = Math.max(profit, arr[i]-mini)
+    public static int stockBuySellOptimise(int[] arr) {
+        int mini = Integer.MAX_VALUE, profit = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < mini)
+                mini = arr[i];
+            else
+                profit = Math.max(profit, arr[i] - mini);
+        }
+        return profit;
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
