@@ -14,6 +14,13 @@ class Pair {
 
 public class _8MergeOverlapping {
 
+    // ! brute force -O(nlogn + n^2) {nlogn to sort & n^2 to iterate}
+    // First check whether the array is sorted or not.If not
+    // sort the array. Now linearly iterate over the array and then check for all of
+    // its next intervals whether they are overlapping with the interval at the
+    // current index. Take a new data structure and insert the overlapped interval.
+    // If while iterating if the interval lies in the interval present in the data
+    // structure simply continue and move to the next interval.
     public static ArrayList<Pair> mergeBrute(ArrayList<Pair> arr) {
         int n = arr.size();
         // sort the input list
@@ -37,6 +44,14 @@ public class _8MergeOverlapping {
         }
         return ans;
     }
+
+    // ! optmised approach - O(nlogn + n) {nlong to sort & n to iterate once}
+    // Linearly iterate over the array if the data structure
+    // is empty insert the interval in the data structure. If the last element in
+    // the data structure overlaps with the current interval we merge the intervals
+    // by updating the last element in the data structure, and if the current
+    // interval does not overlap with the last element in the data structure simply
+    // insert it into the data structure.
 
     public static ArrayList<Pair> mergeOpti(ArrayList<Pair> arr) {
         // list of arrays
@@ -64,6 +79,38 @@ public class _8MergeOverlapping {
         return res;
     }
 
+    // ! Leetcode solution without using pair(using 2d arrays)
+    /*
+     * class Solution {
+     * public int[][] merge(int[][] intervals) {
+     * List<int[]> res = new ArrayList<>();
+     * // corner case - if empty interval or a null interval - return an empty
+     * interval
+     * if (intervals.length == 0 || intervals == null)
+     * return res.toArray(new int[0][]);
+     * // sorting in ascending order
+     * Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+     * // pairs - start & end,so taking variables
+     * int start = intervals[0][0];
+     * int end = intervals[0][1];
+     * // linearly iterate in the intervals
+     * for (int[] i : intervals) {
+     * // if overlapping, then merging
+     * if (i[0] <= end) {
+     * end = Math.max(end, i[1]);
+     * } else {
+     * // if not overlapping, then adding in res & reassigning start & end
+     * res.add(new int[] { start, end });
+     * start = i[0];
+     * end = i[1];
+     * }
+     * }
+     * // whatever left in start & end, add it in res
+     * res.add(new int[] { start, end });
+     * return res.toArray(new int[0][]);
+     * }
+     * }
+     */
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<Pair> arr = new ArrayList<>();
