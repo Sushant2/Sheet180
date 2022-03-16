@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.*;
+import java.lang.reflect.Array;
 
 class Pair {
     int x;
@@ -37,6 +38,32 @@ public class _8MergeOverlapping {
         return ans;
     }
 
+    public static ArrayList<Pair> mergeOpti(ArrayList<Pair> arr) {
+        // list of arrays
+        ArrayList<Pair> res = new ArrayList<>();
+        // if empty inteval or a null interval
+        if (arr.size() == 0 || arr == null)
+            return new ArrayList<>();
+        // sorting in ascending order
+        Collections.sort(arr, (a, b) -> a.x - b.x);
+        // pair stuff taking using 2 variables
+        int start = arr.get(0).x;
+        int end = arr.get(0).y;
+        // linearlt iterate in the intervals
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i).x <= end)
+                end = Math.max(end, arr.get(i).y);
+            else {
+                res.add(new Pair(start, end));
+                start = arr.get(i).x;
+                end = arr.get(i).y;
+            }
+        }
+        // whatever left in the start & end, add it in res
+        res.add(new Pair(start, end));
+        return res;
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<Pair> arr = new ArrayList<>();
@@ -46,7 +73,8 @@ public class _8MergeOverlapping {
             int y = Integer.parseInt(br.readLine());
             arr.add(new Pair(x, y));
         }
-        ArrayList<Pair> ans = mergeBrute(arr);
+        // ArrayList<Pair> ans = mergeBrute(arr);
+        ArrayList<Pair> ans = mergeOpti(arr);
         for (Pair it : ans) {
             System.out.println(it.x + " " + it.y);
         }
