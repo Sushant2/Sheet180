@@ -44,6 +44,28 @@ public class _9MergeSortedArrays {
         }
     }
 
+    public static void mergeMostOpt(int[] arr1, int m, int[] arr2, int n) {
+        for (int i = m; i < m + n; i++) {
+            arr1[i] = arr2[i - m];
+        }
+        int gap = ((n + m) % 2 == 1 && (n + m) != 1) ? ((n + m) / 2 + 1) : ((n + m) / 2);
+        while (gap > 0) {
+            int ptr1 = 0, ptr2 = gap;
+            while (ptr2 < m + n) {
+                if (arr1[ptr1] > arr1[ptr2]) {
+                    int temp = arr1[ptr1];
+                    arr1[ptr1] = arr1[ptr2];
+                    arr1[ptr2] = temp;
+                }
+                ptr1++;
+                ptr2++;
+            }
+            gap = (gap % 2 == 1 && gap != 1) ? (gap / 2 + 1) : (gap / 2);
+        }
+    }
+
+    // time comp - O(nlogn) + space comp - O(1)
+    // ! use gap method strategy/algo
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int m = Integer.parseInt(br.readLine());
@@ -57,7 +79,8 @@ public class _9MergeSortedArrays {
         for (int i = 0; i < n; i++)
             arr2[i] = Integer.parseInt(values2[i]);
         // mergeBrute(arr1, m, arr2, n);
-        mergeOpti(arr1, m, arr2, n);
+        // mergeOpti(arr1, m, arr2, n);
+        mergeMostOpt(arr1, m, arr2, n);
         System.out.println(Arrays.toString(arr1));
     }
 }
