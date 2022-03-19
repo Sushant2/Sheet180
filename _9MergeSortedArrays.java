@@ -1,3 +1,5 @@
+// Leetcode - 88
+
 import java.io.*;
 import java.util.*;
 
@@ -44,6 +46,8 @@ public class _9MergeSortedArrays {
         }
     }
 
+    // time comp - O(nlogn) + space comp - O(1)
+    // ! use gap method strategy/algo
     public static void mergeMostOpt(int[] arr1, int m, int[] arr2, int n) {
         for (int i = m; i < m + n; i++) {
             arr1[i] = arr2[i - m];
@@ -64,8 +68,19 @@ public class _9MergeSortedArrays {
         }
     }
 
-    // time comp - O(nlogn) + space comp - O(1)
-    // ! use gap method strategy/algo
+    // 2 pointers approach - start filling the first arrayfrom back with the larger
+    // one of arr1 & arr2 from back
+    // p1 = m-1, pt = n-1, i = m+n-1
+    public static void merge2Pointer(int[] arr1, int m, int[] arr2, int n) {
+        int p1 = m - 1, p2 = n - 1, i = m + n - 1;
+        while (p2 >= 0) {
+            if (p1 >= 0 && arr1[p1] > arr2[p2])
+                arr1[i--] = arr1[p1--];
+            else
+                arr1[i--] = arr2[p2--];
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int m = Integer.parseInt(br.readLine());
@@ -80,7 +95,8 @@ public class _9MergeSortedArrays {
             arr2[i] = Integer.parseInt(values2[i]);
         // mergeBrute(arr1, m, arr2, n);
         // mergeOpti(arr1, m, arr2, n);
-        mergeMostOpt(arr1, m, arr2, n);
+        // mergeMostOpt(arr1, m, arr2, n);
+        merge2Pointer(arr1, m, arr2, n);
         System.out.println(Arrays.toString(arr1));
     }
 }
