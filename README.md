@@ -13,7 +13,7 @@
 - [ ] Arrays-2
   - [x] Rotate Matrix
   - [x] Merge Overlapping Subintervals
-  - [ ] Merge two sorted arrays without extra space
+  - [x] Merge two sorted arrays without extra space
   - [ ] Find the duplicate in an array of N+1 integers
   - [ ] Repeat and missing number
   - [ ] Inversion of arrays(**pre-req**: Merge Sort)
