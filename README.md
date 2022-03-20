@@ -25,3 +25,9 @@
   - [ ] Grid Unique Paths
   - [ ] Reverse Pairs
 - [ ] Arrays-4
+  - [ ] 2-Sum-Problem
+  - [ ] 4-Sum-Problem
+  - [ ] Longest Consecutive Sequence
+  - [ ] Largest Subarray with 0 sum
+  - [ ] Count number of subarrays with given X or K
+  - [ ] Longest Substring without repeat
