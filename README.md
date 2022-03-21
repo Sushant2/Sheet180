@@ -31,3 +31,6 @@
   - [ ] Largest Subarray with 0 sum
   - [ ] Count number of subarrays with given X or K
   - [ ] Longest Substring without repeat
+- [ ] Linked List
+- [ ] Linked List-2
+- [ ] Linked List & Arrays
