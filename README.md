@@ -13,9 +13,24 @@
 - [ ] Arrays-2
   - [x] Rotate Matrix
   - [x] Merge Overlapping Subintervals
-  - [ ] Merge two sorted arrays without extra space
+  - [x] Merge two sorted arrays without extra space
   - [ ] Find the duplicate in an array of N+1 integers
   - [ ] Repeat and missing number
   - [ ] Inversion of arrays(**pre-req**: Merge Sort)
 - [ ] Arrays-3
+  - [ ] Search in a 2d Matrix
+  - [ ] Pow(x,n)
+  - [ ] Majority Element(>N/2 times)
+  - [ ] Majority Element(>N/3 times)
+  - [ ] Grid Unique Paths
+  - [ ] Reverse Pairs
 - [ ] Arrays-4
+  - [ ] 2-Sum-Problem
+  - [ ] 4-Sum-Problem
+  - [ ] Longest Consecutive Sequence
+  - [ ] Largest Subarray with 0 sum
+  - [ ] Count number of subarrays with given X or K
+  - [ ] Longest Substring without repeat
+- [ ] Linked List
+- [ ] Linked List-2
+- [ ] Linked List & Arrays
