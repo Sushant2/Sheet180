@@ -39,4 +39,23 @@ class Solution {
         }
         return -1;
     }
+
+}
+
+// Most Optimised Approach - Moore's Voting Algorithm
+// time comp - O(n), space comp - O(1)
+class Solution {
+    public int majorityElement(int[] nums) {
+        // most optimised approach - moore's voting algorithm
+        int cnt = 0, ele = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (cnt == 0)
+                ele = nums[i];
+            if (nums[i] == ele)
+                cnt += 1;
+            else
+                cnt -= 1;
+        }
+        return ele;
+    }
 }
