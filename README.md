@@ -10,13 +10,13 @@
   - [x] Sort an array of 0's 1's 2's
   - [x] Stock buy and sell 
 
-- [ ] Arrays-2
+- [x] Arrays-2
   - [x] Rotate Matrix
   - [x] Merge Overlapping Subintervals
   - [x] Merge two sorted arrays without extra space
-  - [ ] Find the duplicate in an array of N+1 integers
-  - [ ] Repeat and missing number
-  - [ ] Inversion of arrays(**pre-req**: Merge Sort)
+  - [x] Find the duplicate in an array of N+1 integers
+  - [x] Repeat and missing number
+  - [x] Inversion of arrays(**pre-req**: Merge Sort)
 - [ ] Arrays-3
   - [ ] Search in a 2d Matrix
   - [ ] Pow(x,n)
