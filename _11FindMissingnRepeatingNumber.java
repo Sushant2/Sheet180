@@ -24,3 +24,31 @@ public class Solution {
     }
 }
 
+// Optimised code - time comp - O(n) - space comp - O(1)
+// using maths - but take long as we doing squaring
+import java.util.ArrayList;
+
+public class Solution {
+
+    public static int[] missingAndRepeating(ArrayList<Integer> arr, int n) {
+        // Write your code here
+        // using maths
+        // sum & products can go large
+        long sum, actSum, sqSum, actsqSum;
+        sum = actSum = sqSum = actsqSum = 0;
+        // calculate actual sum & actual sqaure sum
+        for (int i : arr) {
+            actSum += i;
+            actsqSum += i * i;
+        }
+        sum = (n * (n + 1)) / 2;
+        sqSum = (n * (n + 1) * (2 * n + 1)) / 6;
+        long x = sum - actSum;
+        long y = (sqSum - actsqSum) / x;
+        long a = (x + y) / 2;
+        long b = a - x;
+        int[] out = { (int) a, (int) b };
+        return out;
+    }
+}
+
