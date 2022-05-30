@@ -39,3 +39,28 @@ class Solution {
     }
 }
 
+// Optimised code - specially for leetcode
+// time comp - O(log(m*n)) - space - O(1)
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        // special approach - effective bianry seach
+        // as the problem states - the first integer of each row is greater than the
+        // last integer of the previous rows
+        // so we can consider this as a linear 1d array from o to (m*n)-1
+        if (matrix == null || matrix.length == 0) {
+            return false;
+        }
+        int m = matrix.length, n = matrix[0].length;
+        int low = 0, high = (m * n) - 1;
+        while (low <= high) {
+            int mid = (low + (high - low) / 2);
+            if (matrix[mid / n][mid % n] == target)
+                return true;
+            if (matrix[mid / n][mid % n] < target)
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        return false;
+    }
+}
