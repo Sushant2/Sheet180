@@ -19,3 +19,23 @@ class Solution {
 
 // Another approach - we can apply binary seach to every row - row-wise
 // time comp - O(nlogm) - n rows & m cols
+
+// Optimised Approach - time comp - O(n) & space comp - O(1)
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        // optimised approach - eliminate row & cols as we check our target with curr
+        // ele, starting from first row & last col
+        int i = 0, j = matrix[0].length - 1;
+        // while indexes don't go out of boundary
+        while (i < matrix.length && j >= 0) {
+            if (matrix[i][j] == target)
+                return true;
+            if (matrix[i][j] > target)
+                j--;
+            else
+                i++;
+        }
+        return false;
+    }
+}
+
