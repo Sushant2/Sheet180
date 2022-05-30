@@ -52,3 +52,47 @@ public class Solution {
     }
 }
 
+// Most Optimised code - time comp - O(n) - space comp - O(1)
+// using XOR - bit manipulation
+class Solve {
+    static int x, y;
+
+    int[] findTwoElement(int arr[], int n) {
+        // code here
+        int xor1;
+        int i;
+        xor1 = arr[0];
+        for (i = 1; i < n; i++)
+            xor1 ^= arr[i];
+        for (i = 1; i <= n; i++)
+            xor1 ^= i;
+        int set_bit = xor1 & ~(xor1 - 1);
+        // x for set bit numbers, y for same bit not set numbers
+        x = 0;
+        y = 0;
+        for (i = 0; i < n; i++) {
+            if ((arr[i] & set_bit) != 0)
+                x ^= arr[i];
+            else
+                y ^= arr[i];
+        }
+        for (i = 1; i <= n; i++) {
+            if ((set_bit & i) != 0)
+                x ^= i;
+            else
+                y ^= i;
+        }
+
+        // NB! numbers can be swapped, maybe do a check ?
+        int x_count = 0;
+        for (i = 0; i < n; i++) {
+            if (arr[i] == x)
+                x_count++;
+        }
+
+        if (x_count == 0)
+            return new int[] { y, x };
+
+        return new int[] { x, y };
+    }
+}
