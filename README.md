@@ -24,9 +24,9 @@
   - [x] Majority Element(>N/3 times)
   - [x] Grid Unique Paths
   - [x] Reverse Pairs
-- [ ] Arrays-4
-  - [ ] 2-Sum-Problem
-  - [ ] 4-Sum-Problem
+- [ ] Arrays-4/Hashing
+  - [x] 2-Sum-Problem
+  - [x] 4-Sum-Problem
   - [ ] Longest Consecutive Sequence
   - [ ] Largest Subarray with 0 sum
   - [ ] Count number of subarrays with given X or K
