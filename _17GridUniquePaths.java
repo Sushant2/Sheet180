@@ -53,3 +53,34 @@ class Solution {
         return dp[m - 1][n - 1];
     }
 }
+
+// Tabulation - Space Optimisation - time comp - O(m*n) - space comp - O(n)
+//better optimised there's even no need to take previous row as an array
+class Solution {
+    public int uniquePaths(int m, int n) {
+        // more optimised
+        int[] dp = new int[n];
+        Arrays.fill(dp, 1);
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++)
+                dp[j] += dp[j - 1];
+        }
+        return dp[n - 1];
+    }
+}
+
+
+//Most Optimised Solution - Using combinations formula - using combinations by some observatiosn
+class Solution {
+    public int uniquePaths(int m, int n) {
+        // using combinations
+        // total steps = m+n-2
+        int N = m + n - 2;
+        int r = m - 1;
+        double res = 1;
+        for (int i = 1; i <= r; i++) {
+            res = res * (N - r + i) / i;
+        }
+        return (int) res;
+    }
+}
