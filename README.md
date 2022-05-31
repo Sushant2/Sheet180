@@ -17,13 +17,13 @@
   - [x] Find the duplicate in an array of N+1 integers
   - [x] Repeat and missing number
   - [x] Inversion of arrays(**pre-req**: Merge Sort)
-- [ ] Arrays-3
-  - [ ] Search in a 2d Matrix
-  - [ ] Pow(x,n)
-  - [ ] Majority Element(>N/2 times)
-  - [ ] Majority Element(>N/3 times)
-  - [ ] Grid Unique Paths
-  - [ ] Reverse Pairs
+- [x] Arrays-3
+  - [x] Search in a 2d Matrix
+  - [x] Pow(x,n)
+  - [x] Majority Element(>N/2 times)
+  - [x] Majority Element(>N/3 times)
+  - [x] Grid Unique Paths
+  - [x] Reverse Pairs
 - [ ] Arrays-4
   - [ ] 2-Sum-Problem
   - [ ] 4-Sum-Problem
