@@ -21,3 +21,30 @@ class Solution {
         return maxCount;
     }
 }
+
+// Most Optimised - time comp - O(n) - space comp - O(n)
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        if (nums.length == 0 || nums == null)
+            return 0;
+        int maxCount = 1;
+        HashSet<Integer> set = new HashSet<>();
+        for (int x : nums)
+            set.add(x);
+        for (int x : nums) {
+            if (set.contains(x - 1) == true)
+                continue;
+            else {
+                int count = 1;
+                int y = x;
+                while (set.contains(y + 1)) {
+                    count++;
+                    y += 1;
+                }
+                if (maxCount < count)
+                    maxCount = count;
+            }
+        }
+        return maxCount;
+    }
+}
