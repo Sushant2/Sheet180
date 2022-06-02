@@ -53,3 +53,30 @@ class Solution {
         return maxLen;
     }
 }
+
+// Most optimised code - using hashmap - storing character along with it's index
+// where it is last found
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        // most optimised - usinig hashmap
+        // two pointers
+        int maxLen = 0;
+        int n = s.length();
+        if (n == 0 || s == null)
+            return maxLen;
+        if (n == 1)
+            return 1;
+        int left = 0, right = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        // we'll store character along with index where they last found, int he hashmap
+        while (right < n) {
+            if (map.containsKey(s.charAt(right)) == true) {
+                left = Math.max(left, map.get(s.charAt(right)) + 1);
+            }
+            map.put(s.charAt(right), right);
+            maxLen = Math.max(maxLen, right - left + 1);
+            right++;
+        }
+        return maxLen;
+    }
+}
