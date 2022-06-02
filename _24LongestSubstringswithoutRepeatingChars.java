@@ -27,3 +27,29 @@ class Solution {
         return maxLength;
     }
 }
+
+// Optimised Code - Using HashSet
+// time comp - O(2*n) - space comp - O(256) costant
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        // optimised code - uisng hashset
+        // 2 pointers left & right
+        int n = s.length();
+        int maxLen = 0;
+        if (n == 0 || s == null)
+            return maxLen;
+        if (n == 1)
+            return 1;
+        Set<Character> set = new HashSet<>();
+        int l = 0;
+        for (int r = 0; r < n; r++) {
+            while (set.contains(s.charAt(r))) {
+                set.remove(s.charAt(l));
+                l++;
+            }
+            set.add(s.charAt(r));
+            maxLen = Math.max(maxLen, r - l + 1);
+        }
+        return maxLen;
+    }
+}
