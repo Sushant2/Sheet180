@@ -21,8 +21,8 @@ class Solution {
 }
 
 
-//Efficient Approach - Using Hare & Tortoise Method
-//time comp - O(n) - space comp - O(1)
+// Efficient Approach - Using Hare & Tortoise Method
+// time comp - O(n) - space comp - O(1)
 
 class Solution {
     public ListNode middleNode(ListNode head) {
