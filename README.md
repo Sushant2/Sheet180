@@ -32,11 +32,11 @@
   - [x] Count number of subarrays with given X or K
   - [x] Longest Substring without repeat
 - [ ] Linked List
-  - [ ] Reverse a LinkedList
-  - [ ] Find the middle of LinkedList
-  - [ ] Merge two sorted LInked List
-  - [ ] Remove N-th node from back of the LinkedList
-  - [ ] Add two numbers as LinkedList
+  - [x] Reverse a LinkedList
+  - [x] Find the middle of LinkedList
+  - [x] Merge two sorted LInked List
+  - [x] Remove N-th node from back of the LinkedList
+  - [x] Add two numbers as LinkedList
   - [ ] Delete a given Node when a node is given
 - [ ] Linked List-2
   - [ ] Find intersection point of Y LinkedList
