@@ -24,13 +24,39 @@
   - [x] Majority Element(>N/3 times)
   - [x] Grid Unique Paths
   - [x] Reverse Pairs
-- [ ] Arrays-4/Hashing
+- [x] Arrays-4/Hashing
   - [x] 2-Sum-Problem
   - [x] 4-Sum-Problem
-  - [ ] Longest Consecutive Sequence
-  - [ ] Largest Subarray with 0 sum
-  - [ ] Count number of subarrays with given X or K
-  - [ ] Longest Substring without repeat
+  - [x] Longest Consecutive Sequence
+  - [x] Largest Subarray with 0 sum
+  - [x] Count number of subarrays with given X or K
+  - [x] Longest Substring without repeat
 - [ ] Linked List
+  - [ ] Reverse a LinkedList
+  - [ ] Find the middle of LinkedList
+  - [ ] Merge two sorted LInked List
+  - [ ] Remove N-th node from back of the LinkedList
+  - [ ] Add two numbers as LinkedList
+  - [ ] Delete a given Node when a node is given
 - [ ] Linked List-2
+  - [ ] Find intersection point of Y LinkedList
+  - [ ] Detect a cycle in Linked List
+  - [ ] Reverse a LinkedList in groups of size k
+  - [ ] Check if a LinkedList is palindrome or not
+  - [ ] FInd the starting point of the loop of LinkedList
+  - [ ] Flattening of a LinkedList
 - [ ] Linked List & Arrays
+  - [ ] Rotate a LinkedList
+  - [ ] Clone a LinkedList with random and next Pointer
+  - [ ] 3 Sum
+  - [ ] Trapping Rain Water
+  - [ ] Remove Duplicated from Sorted array
+  - [ ] Max consecutive ones
+
+- [ ] Greedy Algorithm
+  - [ ] N Meetins in one room
+  - [ ] Minimum number of platforms required for a railway
+  - [ ] Job Sequencing Problem
+  - [ ] Fractional Knapsack Problem
+  - [ ] Greedy Algorithm to find minimum number of coins
+  - [ ] Activity Selection(Same as N-Meetings in a room)
