@@ -16,3 +16,19 @@ class Solution {
         return prev;
     }
 }
+
+//Pointer Recursive - time comp - O(n) - space comp - O(1)
+
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        return reverseLLUtil(head, null);
+    }
+
+    private ListNode reverseLLUtil(ListNode head, ListNode newHead) {
+        if (head == null)
+            return newHead;
+        ListNode ahead = head.next;
+        head.next = newHead;
+        return reverseLLUtil(ahead, head);
+    }
+}
