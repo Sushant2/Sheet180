@@ -26,3 +26,23 @@ class Solution {
         return head;
     }
 }
+
+// Efficient Optimised Approach - using single traversal
+// time comp - O(n) - space comp - O(1)
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        // using single pass - 2 pointers approach
+        ListNode dummy = new ListNode(-1);
+        ListNode slow = dummy, fast = dummy;
+        dummy.next = head;
+        // fast pointer will make the gap of n initially
+        for (int i = 1; i <= n; i++)
+            fast = fast.next;
+        while (fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        slow.next = slow.next.next;
+        return dummy.next;
+    }
+}
