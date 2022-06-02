@@ -18,3 +18,26 @@ public class Solution {
     }
 }
 
+// Optimised Approach - Using hashing - time comp - O(n) - space comp - O(n)
+public class Solution {
+    public static int subarraysXor(ArrayList<Integer> arr, int x) {
+        // Write your code here.
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int count = 0;
+        int xor = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            xor ^= arr.get(i);
+            if (xor == x)
+                count++;
+            if (map.containsKey(xor ^ x) == true) {
+                count += map.get(xor ^ x);
+            }
+            if (map.containsKey(xor) == true) {
+                int val = map.get(xor);
+                map.put(xor, val + 1);
+            } else
+                map.put(xor, 1);
+        }
+        return count;
+    }
+}
