@@ -38,13 +38,13 @@
   - [x] Remove N-th node from back of the LinkedList
   - [x] Add two numbers as LinkedList
   - [x] Delete a given Node when a node is given
-- [ ] Linked List-2
-  - [ ] Find intersection point of Y LinkedList
-  - [ ] Detect a cycle in Linked List
-  - [ ] Reverse a LinkedList in groups of size k
-  - [ ] Check if a LinkedList is palindrome or not
-  - [ ] FInd the starting point of the loop of LinkedList
-  - [ ] Flattening of a LinkedList
+- [x] Linked List-2
+  - [x] Find intersection point of Y LinkedList
+  - [x] Detect a cycle in Linked List
+  - [x] Reverse a LinkedList in groups of size k
+  - [x] Check if a LinkedList is palindrome or not
+  - [x] Find the starting point of the loop of LinkedList
+  - [x] Flattening of a LinkedList
 - [ ] Linked List & Arrays
   - [ ] Rotate a LinkedList
   - [ ] Clone a LinkedList with random and next Pointer
