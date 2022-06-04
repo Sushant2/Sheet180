@@ -30,3 +30,41 @@ class Solution {
         return map.get(head);
     }
 }
+
+//Optimised Code - 3 steps
+//time comp - O(n) - space comp - O(1)
+
+class Solution {
+    public Node copyRandomList(Node head) {
+        if (head == null)
+            return null;
+        // step 1 - create deep copy nodes in between of original LL nodes
+        Node prev = head;
+        Node curr = null;
+        while (prev != null) {
+            curr = new Node(prev.val);
+            curr.next = prev.next;
+            prev.next = curr;
+            prev = curr.next;
+        }
+        // step 2 - assign the random pointers, take care of null
+        prev = head;
+        while (prev != null) {
+            prev.next.random = (prev.random != null) ? prev.random.next : null;
+            prev = prev.next.next;
+        }
+        // step 3- remove references & segreagate original & deep copy list
+        prev = head;
+        Node copyCurr = prev.next;
+        Node copyHead = copyCurr;
+        while (prev != null) {
+            prev.next = prev.next.next;
+            if (copyCurr.next == null)
+                break;
+            copyCurr.next = copyCurr.next.next;
+            prev = prev.next;
+            copyCurr = copyCurr.next;
+        }
+        return copyHead;
+    }
+}
