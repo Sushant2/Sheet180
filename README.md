@@ -45,17 +45,17 @@
   - [x] Check if a LinkedList is palindrome or not
   - [x] Find the starting point of the loop of LinkedList
   - [x] Flattening of a LinkedList
-- [ ] Linked List & Arrays
-  - [ ] Rotate a LinkedList
-  - [ ] Clone a LinkedList with random and next Pointer
-  - [ ] 3 Sum
-  - [ ] Trapping Rain Water
-  - [ ] Remove Duplicated from Sorted array
-  - [ ] Max consecutive ones
+- [x] Linked List & Arrays
+  - [x] Rotate a LinkedList
+  - [x] Clone a LinkedList with random and next Pointer
+  - [x] 3 Sum
+  - [x] Trapping Rain Water
+  - [x] Remove Duplicated from Sorted array
+  - [x] Max consecutive ones
 
 - [ ] Greedy Algorithm
-  - [ ] N Meetins in one room
-  - [ ] Minimum number of platforms required for a railway
+  - [x] N Meetins in one room
+  - [x] Minimum number of platforms required for a railway
   - [ ] Job Sequencing Problem
   - [ ] Fractional Knapsack Problem
   - [ ] Greedy Algorithm to find minimum number of coins
