@@ -55,7 +55,7 @@ class Solution {
     }
 }
 
-// Most Optimised - 2 Pointers
+// Most Optimised - 2 Pointers w/o extra space
 // time comp - O(n)
 // space comp - O(1)
 
