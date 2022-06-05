@@ -26,10 +26,11 @@ class Solution {
     }
 }
 
-//Better Solution - precompute leftMax & rightMax for everyindex, like finding prefix & suffix array for every index
-//formula is - sum += Math.min(prefix[i], suffix[i]) - arr[i]
-//time comp - O(n)
-//space comp - O(n)
+// Better Solution - precompute leftMax & rightMax for everyindex, like finding
+// prefix & suffix array for every index
+// formula is - sum += Math.min(prefix[i], suffix[i]) - arr[i]
+// time comp - O(n)
+// space comp - O(n)
 
 class Solution {
     public int trap(int[] height) {
@@ -50,6 +51,34 @@ class Solution {
         for (int i = 0; i < n; i++)
             sum += Math.min(prefix[i], suffix[i]) - height[i];
 
+        return sum;
+    }
+}
+
+// Most Optimised - 2 Pointers
+// time comp - O(n)
+// space comp - O(1)
+
+class Solution {
+    public int trap(int[] height) {
+        // 2 pointers
+        int sum = 0;
+        int l = 0, r = height.length - 1, leftMax = 0, rightMax = 0;
+        while (l < r) {
+            if (height[l] <= height[r]) {
+                if (height[l] >= leftMax)
+                    leftMax = height[l];
+                else
+                    sum += leftMax - height[l];
+                l++;
+            } else {
+                if (height[r] >= rightMax)
+                    rightMax = height[r];
+                else
+                    sum += rightMax - height[r];
+                r--;
+            }
+        }
         return sum;
     }
 }
