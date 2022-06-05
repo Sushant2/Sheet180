@@ -17,3 +17,19 @@ class Solution {
         return i;
     }
 }
+
+//Optimised approach - using 2 pointers
+//time comp - (n) - space comp - O(1)
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        // optimised code
+        // using 2 pointers
+        int i = 0, j = 1;
+        while (j < nums.length) {
+            if (nums[j] != nums[i])
+                nums[++i] = nums[j];
+            j++;
+        }
+        return i + 1;
+    }
+}
