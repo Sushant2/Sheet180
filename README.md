@@ -56,7 +56,7 @@
 - [ ] Greedy Algorithm
   - [x] N Meetins in one room
   - [x] Minimum number of platforms required for a railway
-  - [ ] Job Sequencing Problem
+  - [x] Job Sequencing Problem
   - [ ] Fractional Knapsack Problem
   - [ ] Greedy Algorithm to find minimum number of coins
   - [ ] Activity Selection(Same as N-Meetings in a room)
