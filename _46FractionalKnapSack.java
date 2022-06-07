@@ -12,7 +12,6 @@ class Item {
         this.weight = y;
     }
 }
-
 class Solution {
     // Function to get the maximum total value in the knapsack.
     class itemComparator implements Comparator<Item> {
@@ -30,7 +29,6 @@ class Solution {
     }
 
     double fractionalKnapsack(int W, Item arr[], int n) {
-        // Your code here
         Arrays.sort(arr, new itemComparator());
         int currWeight = 0;
         double finalValue = 0.0;
