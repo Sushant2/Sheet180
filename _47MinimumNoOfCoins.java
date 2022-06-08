@@ -53,3 +53,41 @@ class Solution {
 
     }
 }
+
+//using DP - memoization
+//time comp - O(n*target)
+//space comp - O(n*t) for 2d array + O(n) for recursion stack space
+
+class Solution {
+
+    public int utilMinCoins(int[] arr, int target, int ind, int[][] qb) {
+        // base case
+        if (ind == 0) {
+            if (target % arr[0] == 0)
+                return target / arr[0];
+            else
+                return Integer.MAX_VALUE - 1;
+        }
+        if (qb[ind][target] != -1)
+            return qb[ind][target];
+        int notTake = 0 + utilMinCoins(arr, target, ind - 1, qb);
+        int take = Integer.MAX_VALUE;
+        if (arr[ind] <= target)
+            take = 1 + utilMinCoins(arr, target - arr[ind], ind, qb);
+
+        return qb[ind][target] = Math.min(take, notTake);
+    }
+
+    public int minCoins(int coins[], int M, int V) {
+        // Your code goes here
+        // memoization
+        int[][] qb = new int[M][V + 1];
+        for (int[] x : qb)
+            Arrays.fill(x, -1);
+        int totalCoins = utilMinCoins(coins, V, M - 1, qb);
+        if (totalCoins == Integer.MAX_VALUE - 1)
+            return -1;
+        else
+            return totalCoins;
+    }
+}
