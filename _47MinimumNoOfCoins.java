@@ -91,3 +91,35 @@ class Solution {
             return totalCoins;
     }
 }
+
+//DP - tabulation
+//time comp - O(n*target) - space comp - O(n*target)
+class Solution {
+
+    public int minCoins(int coins[], int M, int V) {
+        // Your code goes here
+        // uisng DP - tabulation - bottom up approach
+        int[][] dp = new int[M][V + 1];
+        // base case into initialisation
+        for (int i = 0; i <= V; i++) {
+            if (i % coins[0] == 0)
+                dp[0][i] = (i / coins[0]);
+            else
+                dp[0][i] = Integer.MAX_VALUE - 1;
+        }
+        for (int ind = 1; ind < M; ind++) {
+            for (int target = 0; target <= V; target++) {
+                int notTake = 0 + dp[ind - 1][target];
+                int take = Integer.MAX_VALUE - 1;
+                if (coins[ind] <= target)
+                    take = 1 + dp[ind][target - coins[ind]];
+                dp[ind][target] = Math.min(notTake, take);
+            }
+        }
+        int ans = dp[M - 1][V];
+        if (ans >= Integer.MAX_VALUE - 1)
+            return -1;
+        else
+            return ans;
+    }
+}
