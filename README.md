@@ -58,5 +58,5 @@
   - [x] Minimum number of platforms required for a railway
   - [x] Job Sequencing Problem
   - [x] Fractional Knapsack Problem
-  - [ ] Greedy Algorithm to find minimum number of coins
+  - [x] Greedy Algorithm to find minimum number of coins
   - [ ] Activity Selection(Same as N-Meetings in a room)
