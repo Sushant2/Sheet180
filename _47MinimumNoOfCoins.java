@@ -21,10 +21,10 @@ class Solution {
 }
 
 // using Recursion
-//time comp - >>O(2^n) - exponential
-//space comp - >>O(target)
+// time comp - >>O(2^n) - exponential
+// space comp - >>O(target)
 
-//recursive code
+// recursive code
 class Solution {
 
     public int utilMinCoins(int[] arr, int target, int ind) {
@@ -54,9 +54,9 @@ class Solution {
     }
 }
 
-//using DP - memoization
-//time comp - O(n*target)
-//space comp - O(n*t) for 2d array + O(n) for recursion stack space
+// using DP - memoization
+// time comp - O(n*target)
+// space comp - O(n*t) for 2d array + O(n) for recursion stack space
 
 class Solution {
 
@@ -92,8 +92,8 @@ class Solution {
     }
 }
 
-//DP - tabulation
-//time comp - O(n*target) - space comp - O(n*target)
+// DP - tabulation
+// time comp - O(n*target) - space comp - O(n*target)
 class Solution {
 
     public int minCoins(int coins[], int M, int V) {
@@ -117,6 +117,40 @@ class Solution {
             }
         }
         int ans = dp[M - 1][V];
+        if (ans >= Integer.MAX_VALUE - 1)
+            return -1;
+        else
+            return ans;
+    }
+}
+
+// DP - Space optmization
+// time comp - O(n*target) - space comp - O(target)
+class Solution {
+
+    public int minCoins(int coins[], int M, int V) {
+        // Your code goes here
+        // uisng DP - tabulation - bottom up approach
+        int[] prev = new int[V + 1];
+        int[] curr = new int[V + 1];
+        // base case into initialisation
+        for (int i = 0; i <= V; i++) {
+            if (i % coins[0] == 0)
+                prev[i] = (i / coins[0]);
+            else
+                prev[i] = Integer.MAX_VALUE - 1;
+        }
+        for (int ind = 1; ind < M; ind++) {
+            for (int target = 0; target <= V; target++) {
+                int notTake = 0 + prev[target];
+                int take = Integer.MAX_VALUE - 1;
+                if (coins[ind] <= target)
+                    take = 1 + curr[target - coins[ind]];
+                curr[target] = Math.min(notTake, take);
+            }
+            prev = curr;
+        }
+        int ans = prev[V];
         if (ans >= Integer.MAX_VALUE - 1)
             return -1;
         else
