@@ -53,10 +53,60 @@
   - [x] Remove Duplicated from Sorted array
   - [x] Max consecutive ones
 
-- [ ] Greedy Algorithm
+- [x] Greedy Algorithm
   - [x] N Meetins in one room
   - [x] Minimum number of platforms required for a railway
   - [x] Job Sequencing Problem
   - [x] Fractional Knapsack Problem
   - [x] Greedy Algorithm to find minimum number of coins
   - [x] Activity Selection(Same as N-Meetings in a room)
+- [ ] Recursion
+  - [ ] Subset Sums
+  - [ ] Subset-2
+  - [ ] Combination sum-1
+  - [ ] Combination sum-2
+  - [ ] Plaindrome Partitioning
+  - [ ] K-th permutation Sequence
+- [ ] Recursion and Backtracking
+  - [ ] Print all permutations of string/array
+  - [ ] N queens Problem
+  - [ ] Sudoku Solver
+  - [ ] M coloring Problem
+  - [ ] Rat in a Maze
+  - [ ] Word Break(print all ways)
+- [ ] Binary Search
+  - [ ] The N-th root of an integer
+  - [ ] Matrix Median
+  - [ ] Find the elment that appears once in a sorted array, and the rest element appears twice
+  - [ ] Search element in a sorted and rotated array/find pivot where it is rotated
+  - [ ] Median of 2 sorted arrays
+  - [ ] K-th element of 2 sorted arrays
+  - [ ] Allocate minimum number of pages
+  - [ ] Aggressive Cows
+- [ ] Heaps
+  - [ ] Max heap, Min heap implementations
+  - [ ] Kth Largest Element
+  - [ ] Maximum Sum Combination
+  - [ ] Find Median from Data Stream
+  - [ ] Find Median from Data Stream
+  - [ ] Merge K sorted arrays
+  - [ ] K most frequent elements
+- [ ] Stack and Queue
+  - [ ] Implement Stack Using Arrays
+  - [ ] Implement Queue Using Arrays
+  - [ ] Implement Stack using Queue(using single queue)
+  - [ ] Implement Queue using Stack(O(1) Amortized method)
+  - [ ] Check for balanced parantheses
+  - [ ] Next Greater Element
+  - [ ] Sort a stack
+- [ ] Stack and Queue Part-2
+  - [ ] Next Smaller Element
+  - [ ] LRU cache (**IMPORTANT**)
+  - [ ] LFU cache
+  - [ ] Largest rectangle in a histogram
+  - [ ] Sliding Window maximum
+  - [ ] Implement Min Stack
+  - [ ] Rotten Orange(Using BFS)
+  - [ ] Stock Span Problem
+  - [ ] FInd the maximum of minimums of every window size
+  - [ ] The Celebrity Problem
