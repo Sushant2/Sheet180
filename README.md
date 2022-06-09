@@ -59,4 +59,4 @@
   - [x] Job Sequencing Problem
   - [x] Fractional Knapsack Problem
   - [x] Greedy Algorithm to find minimum number of coins
-  - [ ] Activity Selection(Same as N-Meetings in a room)
+  - [x] Activity Selection(Same as N-Meetings in a room)
