@@ -112,3 +112,9 @@
   - [ ] The Celebrity Problem
 - [ ] Strings
   - [ ] Reverse Words In String
+  - [ ] Longest Palindrome in a string
+  - [ ] Roman Number to Integer and vice versa
+  - [ ] Roman Number to Integer and Vice versa
+  - [ ] Implement ATOI/STRSTR
+  - [ ] Longest Common Prefix
+  - [ ] Rabin Karp
