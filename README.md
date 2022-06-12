@@ -61,7 +61,7 @@
   - [x] Greedy Algorithm to find minimum number of coins
   - [x] Activity Selection(Same as N-Meetings in a room)
 - [ ] Recursion
-  - [ ] Subset Sums
+  - [x] Subset Sums
   - [ ] Subset-2
   - [ ] Combination sum-1
   - [ ] Combination sum-2
