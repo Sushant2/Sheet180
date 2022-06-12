@@ -62,7 +62,7 @@
   - [x] Activity Selection(Same as N-Meetings in a room)
 - [ ] Recursion
   - [x] Subset Sums
-  - [ ] Subset-2
+  - [x] Subset-2
   - [ ] Combination sum-1
   - [ ] Combination sum-2
   - [ ] Plaindrome Partitioning
