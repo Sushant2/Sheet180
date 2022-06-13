@@ -63,9 +63,9 @@
 - [ ] Recursion
   - [x] Subset Sums
   - [x] Subset-2
-  - [ ] Combination sum-1
-  - [ ] Combination sum-2
-  - [ ] Plaindrome Partitioning
+  - [x] Combination sum-1
+  - [x] Combination sum-2
+  - [x] Plaindrome Partitioning
   - [ ] K-th permutation Sequence
 - [ ] Recursion and Backtracking
   - [ ] Print all permutations of string/array
