@@ -33,3 +33,36 @@ class Solution {
         return new ArrayList<>(ans);
     }
 }
+
+//Optimised code - using recursion - box on level
+//time comp - O(2^n*k) - k is avg. length of DS to store in ans
+//space comp - O(k*x) - if we have x combinations then space will be x*k where
+// k is the average length of the combination.
+
+class Solution {
+    private void recursive(int idx, int[] nums, int target, List<Integer> list, List<List<Integer>> ans) {
+        // base
+        if (target == 0) {
+            ans.add(new ArrayList<>(list));
+            return;
+        }
+        for (int i = idx; i < nums.length; i++) {
+            if (i > idx && nums[i] == nums[i - 1])
+                continue;
+            if (nums[i] > target)
+                break;
+
+            list.add(nums[i]);
+            recursive(i + 1, nums, target - nums[i], list, ans);
+            list.remove(list.size() - 1);
+        }
+
+    }
+
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        Arrays.sort(candidates);
+        List<List<Integer>> ans = new ArrayList<>();
+        recursive(0, candidates, target, new ArrayList<>(), ans);
+        return ans;
+    }
+}
