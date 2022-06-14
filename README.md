@@ -60,13 +60,13 @@
   - [x] Fractional Knapsack Problem
   - [x] Greedy Algorithm to find minimum number of coins
   - [x] Activity Selection(Same as N-Meetings in a room)
-- [ ] Recursion
+- [x] Recursion
   - [x] Subset Sums
   - [x] Subset-2
   - [x] Combination sum-1
   - [x] Combination sum-2
   - [x] Plaindrome Partitioning
-  - [ ] K-th permutation Sequence
+  - [x] K-th permutation Sequence
 - [ ] Recursion and Backtracking
   - [ ] Print all permutations of string/array
   - [ ] N queens Problem
