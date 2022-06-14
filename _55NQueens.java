@@ -121,3 +121,68 @@ class Solution {
         return ans;
     }
 }
+
+//Solution 3 - Backtracking with (Branch - Bound) but with Bitset - no use of any arrays
+//using bit manipulations
+//time comp - O(n!*n)
+//space comp - O(n^2)
+
+class Solution {
+    private void add(char[][] chess, List<List<String>> ans) {
+        List<String> board = new ArrayList<>();
+        for (int i = 0; i < chess.length; i++) {
+            StringBuilder sb = new StringBuilder();
+            for (int j = 0; j < chess.length; j++) {
+                sb.append(chess[i][j]);
+            }
+            board.add(sb.toString());
+        }
+        ans.add(board);
+    }
+
+    private void getNQueens(int row, char[][] chess, int cols, int nDiag, int rDiag, List<List<String>> ans) {
+        // base case
+        if (row == chess.length) {
+            add(chess, ans);
+            return;
+        }
+
+        // options on cols
+        for (int col = 0; col < chess.length; col++) {
+            if ((cols & (1 << col)) == 0 && ((nDiag & (1 << (row + col))) == 0)
+                    && (rDiag & (1 << (row - col + chess.length - 1))) == 0) {
+                chess[row][col] = 'Q';
+                // to set (col)th bit in cols
+                cols ^= (1 << col);
+                // to set (row + col)th bit in normal Diagonal
+                nDiag ^= (1 << (row + col));
+                // to set (row-col+chess.length-1)th bit in reverse Diagonal
+                rDiag ^= (1 << (row - col + chess.length - 1));
+                // call
+                getNQueens(row + 1, chess, cols, nDiag, rDiag, ans);
+                // backtrack
+                // to unset (col)th bit in cols
+                cols ^= (1 << col);
+                // to unset (row + col)th bit in normal Diagonal
+                nDiag ^= (1 << (row + col));
+                // to unset (row-col+chess.length-1)th bit in reverse Diagonal
+                rDiag ^= (1 << (row - col + chess.length - 1));
+                chess[row][col] = '.';
+            }
+        }
+    }
+
+    public List<List<String>> solveNQueens(int n) {
+        // using Branch and bound method
+        // using 3 arrays - column, normal Diagonal, reverse Diagonal
+        List<List<String>> ans = new ArrayList<>();
+        int col = 0;
+        int nDiag = 0;
+        int rDiag = 0;
+        char[][] chess = new char[n][n];
+        for (char[] board : chess)
+            Arrays.fill(board, '.');
+        getNQueens(0, chess, col, nDiag, rDiag, ans);
+        return ans;
+    }
+}
