@@ -68,8 +68,8 @@
   - [x] Plaindrome Partitioning
   - [x] K-th permutation Sequence
 - [ ] Recursion and Backtracking
-  - [ ] Print all permutations of string/array
-  - [ ] N queens Problem
+  - [x] Print all permutations of string/array
+  - [x] N queens Problem
   - [ ] Sudoku Solver
   - [ ] M coloring Problem
   - [ ] Rat in a Maze
