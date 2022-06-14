@@ -61,3 +61,63 @@ class Solution {
         return ans;
     }
 }
+
+
+//Solution 2 - Branch & Bound (FASTER THAN ABOVE)
+//using 3 separate arrays to block that queen's future col, left diagonal, right diagonal
+//time comp - O(n!*n) - exponential
+//space comp - O(n^2) - chess board
+
+class Solution {
+    private void add(char[][] chess, List<List<String>> ans) {
+        List<String> board = new ArrayList<>();
+        for (int i = 0; i < chess.length; i++) {
+            StringBuilder sb = new StringBuilder();
+            for (int j = 0; j < chess.length; j++) {
+                sb.append(chess[i][j]);
+            }
+            board.add(sb.toString());
+        }
+        ans.add(board);
+    }
+
+    private void getNQueens(int row, char[][] chess, boolean[] cols, boolean[] normalD, boolean[] reverseD,
+            List<List<String>> ans) {
+        // base case
+        if (row == chess.length) {
+            add(chess, ans);
+            return;
+        }
+
+        // options on cols
+        for (int col = 0; col < chess.length; col++) {
+            if (cols[col] == false && normalD[row + col] == false && reverseD[row - col + chess.length - 1] == false) {
+                chess[row][col] = 'Q';
+                cols[col] = true;
+                normalD[row + col] = true;
+                reverseD[row - col + chess.length - 1] = true;
+                // call
+                getNQueens(row + 1, chess, cols, normalD, reverseD, ans);
+                // backtrack
+                chess[row][col] = '.';
+                cols[col] = false;
+                normalD[row + col] = false;
+                reverseD[row - col + chess.length - 1] = false;
+            }
+        }
+    }
+
+    public List<List<String>> solveNQueens(int n) {
+        // using Branch and bound method
+        // using 3 arrays - column, normal Diagonal, reverse Diagonal
+        List<List<String>> ans = new ArrayList<>();
+        boolean[] col = new boolean[n];
+        boolean[] normalD = new boolean[2 * n - 1];
+        boolean[] reverseD = new boolean[2 * n - 1];
+        char[][] chess = new char[n][n];
+        for (char[] board : chess)
+            Arrays.fill(board, '.');
+        getNQueens(0, chess, col, normalD, reverseD, ans);
+        return ans;
+    }
+}
