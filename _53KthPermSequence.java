@@ -35,3 +35,37 @@ class Solution {
         return allPerms.get(k-1);
     }
 }
+
+//Optimised Code - using maths - observation
+//time comp - O(n^2) 
+//as we placing n numbers in n positions so, O(n) & for every ele no,we reducing the search space by removing the ele already placed in previous step which takes O(n) ~ O(n^2)
+//space comp - O(n) to form the number
+
+class Solution {
+    public String getPermutation(int n, int k) {
+        // using maths
+        int fact = 1;
+        List<Integer> nums = new ArrayList<>();
+        // initially we compute (n-1) factorial, as for n=4, first block if of size
+        // 6(3!)
+        for (int i = 1; i < n; i++) {
+            fact = fact * i;
+            nums.add(i);
+        }
+        nums.add(n);
+        String ans = "";
+        // for o based indexing
+        k = k - 1;
+        while (true) {
+            ans = ans + nums.get(k / fact);
+            // now reduce the nums by removing (k/fact) ele
+            nums.remove(k / fact);
+            // if nums become empty, break means we've formed our answer
+            if (nums.size() == 0)
+                break;
+            k = k % fact;
+            fact = fact / nums.size();
+        }
+        return ans;
+    }
+}
