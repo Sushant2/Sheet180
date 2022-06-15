@@ -67,13 +67,13 @@
   - [x] Combination sum-2
   - [x] Plaindrome Partitioning
   - [x] K-th permutation Sequence
-- [ ] Recursion and Backtracking
+- [x] Recursion and Backtracking
   - [x] Print all permutations of string/array
   - [x] N queens Problem
   - [x] Sudoku Solver
   - [x] M coloring Problem
   - [x] Rat in a Maze
-  - [ ] Word Break(print all ways)
+  - [x] Word Break(print all ways)
 - [ ] Binary Search
   - [ ] The N-th root of an integer
   - [ ] Matrix Median
