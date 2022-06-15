@@ -70,9 +70,9 @@
 - [ ] Recursion and Backtracking
   - [x] Print all permutations of string/array
   - [x] N queens Problem
-  - [ ] Sudoku Solver
-  - [ ] M coloring Problem
-  - [ ] Rat in a Maze
+  - [x] Sudoku Solver
+  - [x] M coloring Problem
+  - [x] Rat in a Maze
   - [ ] Word Break(print all ways)
 - [ ] Binary Search
   - [ ] The N-th root of an integer
