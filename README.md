@@ -75,9 +75,9 @@
   - [x] Rat in a Maze
   - [x] Word Break(print all ways)
 - [ ] Binary Search
-  - [ ] The N-th root of an integer
-  - [ ] Matrix Median
-  - [ ] Find the elment that appears once in a sorted array, and the rest element appears twice
+  - [x] The N-th root of an integer
+  - [x] Matrix Median
+  - [x] Find the elment that appears once in a sorted array, and the rest element appears twice
   - [ ] Search element in a sorted and rotated array/find pivot where it is rotated
   - [ ] Median of 2 sorted arrays
   - [ ] K-th element of 2 sorted arrays
