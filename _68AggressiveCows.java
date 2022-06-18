@@ -78,7 +78,6 @@ class Main {
     }
 
     private static void solve(int[] arr, int n, int C) {
-        // brute force/naive
         Arrays.sort(arr);
         int res = 0;
         int low = 1, high = arr[n - 1] - arr[0];
