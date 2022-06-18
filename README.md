@@ -74,15 +74,15 @@
   - [x] M coloring Problem
   - [x] Rat in a Maze
   - [x] Word Break(print all ways)
-- [ ] Binary Search
+- [x] Binary Search
   - [x] The N-th root of an integer
   - [x] Matrix Median
   - [x] Find the elment that appears once in a sorted array, and the rest element appears twice
-  - [ ] Search element in a sorted and rotated array/find pivot where it is rotated
-  - [ ] Median of 2 sorted arrays
-  - [ ] K-th element of 2 sorted arrays
-  - [ ] Allocate minimum number of pages
-  - [ ] Aggressive Cows
+  - [x] Search element in a sorted and rotated array/find pivot where it is rotated
+  - [x] Median of 2 sorted arrays
+  - [x] K-th element of 2 sorted arrays
+  - [x] Allocate minimum number of pages
+  - [x] Aggressive Cows
 - [ ] Heaps
   - [ ] Max heap, Min heap implementations
   - [ ] Kth Largest Element
