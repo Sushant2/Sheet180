@@ -51,3 +51,58 @@ public class _68AggressiveCows {
         }
     }
 }
+
+// Efficient Solution - using binary search
+// time comp - O(n*log(n))
+// space comp - O(1)
+
+import java.util.*;
+import java.lang.*;
+import java.util.*;
+import java.io.*;
+
+class Main {
+    private static boolean canCowsPlaced(int[] arr, int n, int C, int dist) {
+        // initially we'll place our first cow at first stall
+        int k = arr[0];
+        int cnt = 1; // count of cows placed until now
+        for (int i = 1; i < n; i++) {
+            if (arr[i] - k >= dist) {
+                cnt++;
+                k = arr[i];
+            }
+            if (cnt == C)
+                return true;
+        }
+        return false;
+    }
+
+    private static void solve(int[] arr, int n, int C) {
+        // brute force/naive
+        Arrays.sort(arr);
+        int res = 0;
+        int low = 1, high = arr[n - 1] - arr[0];
+        while (low <= high) {
+            int mid = (low + high) >> 1;
+            if (canCowsPlaced(arr, n, C, mid)) {
+                res = mid;
+                low = mid + 1;
+            } else
+                high = mid - 1;
+        }
+        System.out.println(res);
+    }
+
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner scn = new Scanner(System.in);
+        int t = scn.nextInt();
+        while (t-- > 0) {
+            int n = scn.nextInt();
+            int c = scn.nextInt();
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++)
+                arr[i] = scn.nextInt();
+            solve(arr, n, c);
+        }
+    }
+}
