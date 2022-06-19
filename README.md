@@ -156,3 +156,27 @@
   - [ ] Flatten Binary Tree to LinkedList
   - [ ] Check if Binary Tree is the mirror of itself or not
   - [ ] Check for Children Sum Property
+- [ ] Binary Search Tree
+  - [ ] Populate Next Right pointers of Tree
+  - [ ] Search given key in BST
+  - [ ] Construct BST from given keys
+  - [ ] Construct BST from preorder traversal
+  - [ ] Check is a BT is BST or not
+  - [ ] Find LCA of two nodes in BST
+  - [ ] Find the inorder predecessor/successor of a given key in BST.
+- [ ] Binary Search Tree Part-2
+  - [ ] Floor in a BST
+  - [ ] Ceil in a BST
+  - [ ] Find k-th smallest element in BST
+  - [ ] Find K-th largest element in BST
+  - [ ] Find a pair with a given sum in BST
+  - [ ] BST iterator
+  - [ ] Size of the largest BST in a BIanry Tree
+  - [ ] Serialize and deserialize Binary Tree
+- [ ] Binary Tree(Misc)
+  - [ ] Binary tree to double Linked List
+  - [ ] Find Median in a stream of running integers
+  - [ ] K-th largest element in a stream
+  - [ ] Distinct numbers in window
+  - [ ] K-th largest element in an unsorted array
+  - [ ] Flood-fill algorithm
