@@ -138,3 +138,21 @@
   - [ ] Vertical order traversal
   - [ ] Root to node path in a Binary Tree
   - [ ] Max Width of a Binary Tree
+
+- [ ] Binary Tree Part-2
+  - [ ] Level order Traversal/Level order traversal in spiral form
+  - [ ] Height of a Binary Tree
+  - [ ] Diameter of Binary Tree
+  - [ ] Check if the Binary tree is height balanced or not
+  - [ ] LCA in Binary Tree
+  - [ ] Check if two trees are identical or not
+  - [ ] Zig Zag Traversal of Bianry Tree
+  - [ ] Boundary Traversal of Binary Tree
+- [ ] Binary Tree part-3
+  - [ ] Maximum Path sum
+  - [ ] Construct Binary Tree from inorder & preorder
+  - [ ] Construct Binary Tree from inorder & postorder
+  - [ ] Symmetric Binary Tree
+  - [ ] Flatten Binary Tree to LinkedList
+  - [ ] Check if Binary Tree is the mirror of itself or not
+  - [ ] Check for Children Sum Property
