@@ -192,3 +192,10 @@
   - [ ] Number of islands(Do in Grid and graph Both)
   - [ ] Bipartitie Check using BFS
   - [ ] Bipartite Check using DFS
+- [ ] Graph Part-2
+  - [ ] Strongly Connected Component(using Kosaraju's algo)
+  - [ ] Dijkstra's Algorithm
+  - [ ] Bellman-Ford Algo
+  - [ ] Floyd Warshall Algorithm
+  - [ ] MST using Prim's Algo
+  - [ ] MST using Krushkal's Algo
