@@ -180,3 +180,15 @@
   - [ ] Distinct numbers in window
   - [ ] K-th largest element in an unsorted array
   - [ ] Flood-fill algorithm
+- [ ] Graph
+  - [ ] Clone a graph(Not that easy as it looks)
+  - [ ] DFS
+  - [ ] BFS
+  - [ ] Detect A cycle in Undirected Graph uisng BFS
+  - [ ] Detect A cycle in Undirected graph using DFS
+  - [ ] Detect A cycle in Directed graph using DFS
+  - [ ] Detect A cycle in Directed graph uisng BFS
+  - [ ] Topological Sort BFS
+  - [ ] Number of islands(Do in Grid and graph Both)
+  - [ ] Bipartitie Check using BFS
+  - [ ] Bipartite Check using DFS
