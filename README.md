@@ -199,3 +199,11 @@
   - [ ] Floyd Warshall Algorithm
   - [ ] MST using Prim's Algo
   - [ ] MST using Krushkal's Algo
+- [ ] Dynamic Programming
+  - [ ] Max Product Subarray
+  - [ ] Longest Increasing Subsequence
+  - [ ] Longest Common Subsequence
+  - [ ] 0-1 Knapsack
+  - [ ] Edit Distance
+  - [ ] Maximum sum increasing subsequence
+  - [ ] Matrix Chain Multiplication
