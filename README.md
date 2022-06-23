@@ -222,3 +222,5 @@
   - [ ] Longest String with all Prefixes
   - [ ] Number of Distinct Substrings in a String
   - [ ] Power Set(this is very important)
+  - [ ] Maximum XOR of two numbers in an array
+  - [ ] Maximum XOR with an Element from Array
