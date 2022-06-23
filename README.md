@@ -208,11 +208,17 @@
   - [ ] Maximum sum increasing subsequence
   - [ ] Matrix Chain Multiplication
 - [ ] Dynamic Programming-2
-- [ ] Minimum sum path in the matrix.(count paths and similar type do, also backtrack to find the minimum path)
-- [ ] Coin Change
-- [ ] Subset Sum
-- [ ] Rod Cutting
-- [ ] Egg Dropping
-- [ ] Word Break
-- [ ] Palindrome Partitioning(MCM variation)
-- [ ] Maximum profit in Job scheduling 
+  - [ ] Minimum sum path in the matrix.(count paths and similar type do, also backtrack to find the minimum path)
+  - [ ] Coin Change
+  - [ ] Subset Sum
+  - [ ] Rod Cutting
+  - [ ] Egg Dropping
+  - [ ] Word Break
+  - [ ] Palindrome Partitioning(MCM variation)
+  - [ ] Maximum profit in Job scheduling
+- [] Trie
+  - [ ] Implement Trie(prefix tree)
+  - [ ] Implement Trie(preifx tree)
+  - [ ] Longest String with all Prefixes
+  - [ ] Number of Distinct Substrings in a String
+  - [ ] Power Set(this is very important)
