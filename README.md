@@ -60,6 +60,7 @@
   - [x] Fractional Knapsack Problem
   - [x] Greedy Algorithm to find minimum number of coins
   - [x] Activity Selection(Same as N-Meetings in a room)
+
 - [x] Recursion
   - [x] Subset Sums
   - [x] Subset-2
@@ -67,6 +68,7 @@
   - [x] Combination sum-2
   - [x] Plaindrome Partitioning
   - [x] K-th permutation Sequence
+
 - [x] Recursion and Backtracking
   - [x] Print all permutations of string/array
   - [x] N queens Problem
@@ -74,6 +76,7 @@
   - [x] M coloring Problem
   - [x] Rat in a Maze
   - [x] Word Break(print all ways)
+
 - [x] Binary Search
   - [x] The N-th root of an integer
   - [x] Matrix Median
@@ -83,6 +86,7 @@
   - [x] K-th element of 2 sorted arrays
   - [x] Allocate minimum number of pages
   - [x] Aggressive Cows
+  
 - [ ] Heaps
   - [ ] Max heap, Min heap implementations
   - [ ] Kth Largest Element
@@ -91,6 +95,7 @@
   - [ ] Find Median from Data Stream
   - [ ] Merge K sorted arrays
   - [ ] K most frequent elements
+  
 - [ ] Stack and Queue
   - [ ] Implement Stack Using Arrays
   - [ ] Implement Queue Using Arrays
@@ -99,6 +104,7 @@
   - [ ] Check for balanced parantheses
   - [ ] Next Greater Element
   - [ ] Sort a stack
+  
 - [ ] Stack and Queue Part-2
   - [ ] Next Smaller Element
   - [ ] LRU cache (**IMPORTANT**)
@@ -110,6 +116,7 @@
   - [ ] Stock Span Problem
   - [ ] FInd the maximum of minimums of every window size
   - [ ] The Celebrity Problem
+
 - [ ] Strings
   - [ ] Reverse Words In String
   - [ ] Longest Palindrome in a string
@@ -118,6 +125,7 @@
   - [ ] Implement ATOI/STRSTR
   - [ ] Longest Common Prefix
   - [ ] Rabin Karp
+
 - [ ] Strings Part-2
   - [ ] Z-Function
   - [ ] KMP algo / LPS(pi) array
@@ -125,6 +133,7 @@
   - [ ] Check for Anagrams
   - [ ] Count and Say
   - [ ] Compare version numbers
+
 - [ ] Binary Tree
   - [ ] Inorder Traversal
   - [ ] Preorder Traversal
@@ -148,6 +157,7 @@
   - [ ] Check if two trees are identical or not
   - [ ] Zig Zag Traversal of Bianry Tree
   - [ ] Boundary Traversal of Binary Tree
+
 - [ ] Binary Tree part-3
   - [ ] Maximum Path sum
   - [ ] Construct Binary Tree from inorder & preorder
@@ -164,6 +174,7 @@
   - [ ] Check is a BT is BST or not
   - [ ] Find LCA of two nodes in BST
   - [ ] Find the inorder predecessor/successor of a given key in BST.
+
 - [ ] Binary Search Tree Part-2
   - [ ] Floor in a BST
   - [ ] Ceil in a BST
@@ -173,6 +184,7 @@
   - [ ] BST iterator
   - [ ] Size of the largest BST in a BIanry Tree
   - [ ] Serialize and deserialize Binary Tree
+
 - [ ] Binary Tree(Misc)
   - [ ] Binary tree to double Linked List
   - [ ] Find Median in a stream of running integers
@@ -180,6 +192,7 @@
   - [ ] Distinct numbers in window
   - [ ] K-th largest element in an unsorted array
   - [ ] Flood-fill algorithm
+
 - [ ] Graph
   - [ ] Clone a graph(Not that easy as it looks)
   - [ ] DFS
@@ -192,6 +205,7 @@
   - [ ] Number of islands(Do in Grid and graph Both)
   - [ ] Bipartitie Check using BFS
   - [ ] Bipartite Check using DFS
+
 - [ ] Graph Part-2
   - [ ] Strongly Connected Component(using Kosaraju's algo)
   - [ ] Dijkstra's Algorithm
@@ -207,6 +221,7 @@
   - [ ] Edit Distance
   - [ ] Maximum sum increasing subsequence
   - [ ] Matrix Chain Multiplication
+
 - [ ] Dynamic Programming-2
   - [ ] Minimum sum path in the matrix.(count paths and similar type do, also backtrack to find the minimum path)
   - [ ] Coin Change
@@ -216,6 +231,7 @@
   - [ ] Word Break
   - [ ] Palindrome Partitioning(MCM variation)
   - [ ] Maximum profit in Job scheduling
+
 - [] Trie
   - [ ] Implement Trie(prefix tree)
   - [ ] Implement Trie(preifx tree)
