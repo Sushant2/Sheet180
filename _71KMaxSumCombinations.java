@@ -55,7 +55,7 @@ public class _71KMaxSumCombinations {
         Collections.sort(b);
 
         // max heap
-        PriorityQueue<PairSum> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<PairSum> pq = new PriorityQueue<>();
         pq.add(new PairSum((a.get(n - 1) + b.get(n - 1)), n - 1, n - 1));
 
         // using a set to track if the pair of indices are already present in the max
