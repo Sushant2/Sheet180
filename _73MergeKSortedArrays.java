@@ -89,3 +89,52 @@ public static ArrayList<Integer> merge(ArrayList<Integer> first, ArrayList<Integ
         ArrayList<Integer> ans = mergeKSortedList(kArrays, 0, k-1);
         return ans;
     }
+
+//Most Optimal Approach - using min heap - taking only first ele of all k lists initally & move further one by one
+//time comp - O(n*k)*log(k)
+//space comp - O(n*k)
+
+import java.util.ArrayList;
+import java.util.*;
+public class Solution 
+{
+    public static class Pair{
+        int ele, arrIdx, eleIdx;
+        public Pair(int ele, int arrIdx, int eleIdx){
+            this.ele = ele;
+            this.arrIdx = arrIdx;
+            this.eleIdx = eleIdx;
+        }
+    }
+    
+    public static class PairComparator implements Comparator<Pair> {
+        @Override
+        public int compare(Pair a, Pair b){
+            return a.ele - b.ele;
+        }
+    }
+    
+	public static ArrayList<Integer> mergeKSortedArrays(ArrayList<ArrayList<Integer>> kArrays, int k)
+	{
+		// Write your code here.
+        ArrayList<Integer> ans = new ArrayList<>();
+        //using min heap with the limited size - k
+        PriorityQueue<Pair> pq = new PriorityQueue<>(new PairComparator());
+        //initially insert first ele of all k arrayList
+        for(int i = 0;i<k;i++){
+            pq.add(new Pair(kArrays.get(i).get(0), i, 0));
+        }
+        while(!pq.isEmpty()){
+            Pair p = pq.remove();
+            int ele = p.ele;
+            int arridx = p.arrIdx;
+            int eleIdx = p.eleIdx;
+            ans.add(ele);
+             // If the next element of the extracted element exists, add it to the heap.
+            if(eleIdx + 1 < kArrays.get(arridx).size()){
+                pq.add(new Pair(kArrays.get(arridx).get(eleIdx+1), arridx, eleIdx+1));
+            }
+        }
+        return ans;
+	}
+}
