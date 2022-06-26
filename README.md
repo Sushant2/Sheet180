@@ -87,14 +87,14 @@
   - [x] Allocate minimum number of pages
   - [x] Aggressive Cows
   
-- [ ] Heaps
-  - [ ] Max heap, Min heap implementations
-  - [ ] Kth Largest Element
-  - [ ] Maximum Sum Combination
-  - [ ] Find Median from Data Stream
-  - [ ] Find Median from Data Stream
-  - [ ] Merge K sorted arrays
-  - [ ] K most frequent elements
+- [x] Heaps
+  - [x] Max heap, Min heap implementations
+  - [x] Kth Largest Element
+  - [x] Maximum Sum Combination
+  - [x] Find Median from Data Stream
+  - [x] Find Median from Data Stream
+  - [x] Merge K sorted arrays
+  - [x] K most frequent elements
   
 - [ ] Stack and Queue
   - [ ] Implement Stack Using Arrays
