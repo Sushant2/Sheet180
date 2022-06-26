@@ -31,3 +31,40 @@ class MedianFinder {
             return arr.get(size / 2) + 0.0;
     }
 }
+
+//Most optimal using - Heaps - Max & Min Heaps
+//time comp - O(n*logn)
+//space comp - O(n)
+
+class MedianFinder {
+    PriorityQueue<Integer> left;
+    // left is maxheap
+    PriorityQueue<Integer> right;
+    // right is meanheap
+
+    public MedianFinder() {
+        left = new PriorityQueue<>(Collections.reverseOrder());
+        right = new PriorityQueue<>();
+    }
+
+    public void addNum(int num) {
+        if (left.isEmpty() == true || left.peek() > num)
+            left.add(num);
+        else
+            right.add(num);
+        // balancing
+        if (left.size() - right.size() >= 2) {
+            right.add(left.remove());
+        } else if (right.size() - left.size() >= 2)
+            left.add(right.remove());
+    }
+
+    public double findMedian() {
+        if (left.size() == right.size())
+            return (double) (left.peek() + right.peek()) / 2;
+        else if (left.size() > right.size())
+            return (double) left.peek();
+        else
+            return (double) right.peek();
+    }
+}
