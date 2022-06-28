@@ -1,4 +1,4 @@
-//Coding Ninjas - Sort a stack
+//Coding Ninjas - Sort a stack in descending order
 //only using recursion & pus(), pop(), isEmpty()
 //can't use any loops
 
