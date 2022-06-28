@@ -96,14 +96,14 @@
   - [x] Merge K sorted arrays
   - [x] K most frequent elements
   
-- [ ] Stack and Queue
-  - [ ] Implement Stack Using Arrays
-  - [ ] Implement Queue Using Arrays
-  - [ ] Implement Stack using Queue(using single queue)
-  - [ ] Implement Queue using Stack(O(1) Amortized method)
-  - [ ] Check for balanced parantheses
-  - [ ] Next Greater Element
-  - [ ] Sort a stack
+- [x] Stack and Queue
+  - [x] Implement Stack Using Arrays
+  - [x] Implement Queue Using Arrays
+  - [x] Implement Stack using Queue(using single queue)
+  - [x] Implement Queue using Stack(O(1) Amortized method)
+  - [x] Check for balanced parantheses
+  - [x] Next Greater Element
+  - [x] Sort a stack
   
 - [ ] Stack and Queue Part-2
   - [ ] Next Smaller Element
