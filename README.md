@@ -105,9 +105,9 @@
   - [x] Next Greater Element
   - [x] Sort a stack
   
-- [ ] Stack and Queue Part-2
-  - [ ] Next Smaller Element
-  - [ ] LRU cache (**IMPORTANT**)
+- [] Stack and Queue Part-2
+  - [x] Next Smaller Element
+  - [x] LRU cache (**IMPORTANT**)
   - [ ] LFU cache
   - [ ] Largest rectangle in a histogram
   - [ ] Sliding Window maximum
