@@ -27,3 +27,50 @@ class Solution {
         return maxArea;
     }
 }
+
+
+//Optimsed Approach - using concept of next smaller element to left & right
+
+//time comp - O(n)
+//space comp - O(n)
+
+class Solution {
+    public int largestRectangleArea(int[] heights) {
+        // better brute force
+        // finding leftsmaller & rightsmaller before hand & storing in an array
+        // corresponds to that ele
+        int n = heights.length;
+        int[] leftNse = new int[n];
+        int[] rightNse = new int[n];
+        Stack<Integer> stk = new Stack<>();
+        for (int i = 0; i < n; i++) {
+            while (!stk.isEmpty() && heights[stk.peek()] >= heights[i])
+                stk.pop();
+            if (stk.isEmpty() == true)
+                leftNse[i] = 0;
+            else
+                leftNse[i] = stk.peek() + 1;
+            stk.push(i);
+        }
+
+        // clear stack - using same stack to find next smaller to right
+        while (!stk.isEmpty())
+            stk.pop();
+
+        for (int i = n - 1; i >= 0; i--) {
+            while (!stk.isEmpty() && heights[stk.peek()] >= heights[i])
+                stk.pop();
+            if (stk.isEmpty() == true)
+                rightNse[i] = n - 1;
+            else
+                rightNse[i] = stk.peek() - 1;
+            stk.push(i);
+        }
+
+        int maxArea = 0;
+        for (int i = 0; i < n; i++) {
+            maxArea = Math.max(maxArea, heights[i] * (rightNse[i] - leftNse[i] + 1));
+        }
+        return maxArea;
+    }
+}
