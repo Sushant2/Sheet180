@@ -3,6 +3,8 @@
 
 //Approach - 1
 //using 2 Stacks - if push - push on both, & if pop - pop from both
+//time comp - O(1)
+//space comp - O(2n)
 
 class MinStack {
     Stack<Integer> stk;
@@ -38,3 +40,8 @@ class MinStack {
         return minStack.peek();
     }
 }
+
+
+//Most Optimised approach - using 1 stack & ecrypt & decrpt method to push - pop values
+//time comp - O(1)
+//space comp - O(n)
