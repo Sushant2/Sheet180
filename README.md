@@ -108,10 +108,10 @@
 - [] Stack and Queue Part-2
   - [x] Next Smaller Element
   - [x] LRU cache (**IMPORTANT**)
-  - [ ] LFU cache
-  - [ ] Largest rectangle in a histogram
-  - [ ] Sliding Window maximum
-  - [ ] Implement Min Stack
+  - [x] LFU cache
+  - [x] Largest rectangle in a histogram
+  - [x] Sliding Window maximum
+  - [x] Implement Min Stack
   - [ ] Rotten Orange(Using BFS)
   - [ ] Stock Span Problem
   - [ ] FInd the maximum of minimums of every window size
