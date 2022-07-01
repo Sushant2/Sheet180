@@ -42,6 +42,52 @@ class MinStack {
 }
 
 
-//Most Optimised approach - using 1 stack & ecrypt & decrpt method to push - pop values
-//time comp - O(1)
-//space comp - O(n)
+// Most Optimised approach - using 1 stack & ecrypt & decrpt method to push -
+// pop values
+// time comp - O(1)
+// space comp - O(n)
+
+class MinStack {
+    Stack<Long> stk = new Stack<>();
+    Long mini;
+
+    public MinStack() {
+        mini = Long.MAX_VALUE;
+    }
+
+    public void push(int val) {
+        // convert int to long
+        Long value = Long.valueOf(val);
+        if (stk.isEmpty()) {
+            mini = value;
+            stk.push(value);
+        } else {
+            if (value < mini) {
+                stk.push(2 * value - mini);
+                mini = value;
+            } else {
+                stk.push(value);
+            }
+        }
+    }
+
+    public void pop() {
+        if (stk.isEmpty())
+            return;
+        Long val = stk.pop();
+        if (val < mini)
+            mini = 2 * mini - val;
+    }
+
+    public int top() {
+        Long val = stk.peek();
+        if (val < mini) {
+            return mini.intValue();
+        }
+        return val.intValue();
+    }
+
+    public int getMin() {
+        return mini.intValue();
+    }
+}
