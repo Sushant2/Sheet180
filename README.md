@@ -166,6 +166,7 @@
   - [ ] Flatten Binary Tree to LinkedList
   - [ ] Check if Binary Tree is the mirror of itself or not
   - [ ] Check for Children Sum Property
+
 - [ ] Binary Search Tree
   - [ ] Populate Next Right pointers of Tree
   - [ ] Search given key in BST
@@ -213,6 +214,8 @@
   - [ ] Floyd Warshall Algorithm
   - [ ] MST using Prim's Algo
   - [ ] MST using Krushkal's Algo
+
+
 - [ ] Dynamic Programming
   - [ ] Max Product Subarray
   - [ ] Longest Increasing Subsequence
