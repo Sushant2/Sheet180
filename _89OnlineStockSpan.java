@@ -1,5 +1,14 @@
 //Leetcode - 901 - Online Stock Span
 
+/*
+Push every pair of <price, result> to a stack.
+Pop lower price from the stack and accumulate the count.
+
+One price will be pushed once and popped once.
+So 2 * N times stack operations and N times calls.
+I'll say time complexity is amortized O(1)
+*/
+
 //time comp - O(n) - n is no. of prices
 //space comp - O(n)
 
