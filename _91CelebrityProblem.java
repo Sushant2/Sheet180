@@ -84,3 +84,59 @@ int celebrity(int M[][], int n)
     return -1;
 }
 }
+
+
+//Another Approach - using recursion
+//time comp - O(n)
+//space comp - O(1) & O(n) recursion stack space
+
+class Solution {
+    // Function to find if there is a celebrity in the party or not.
+    int knows(int[][] M, int i, int j) {
+        return M[i][j];
+    }
+
+    int findCeleb(int[][] M, int n) {
+        // base case - when there are no people
+        if (n == 0)
+            return -1;
+        // faith
+        int id = findCeleb(M, n - 1);
+
+        // if there are no celeb
+        if (id == -1)
+            return n - 1;
+
+        // if the id knows nth person then, id can't be celeb, but nth person could be
+        if (knows(M, id, n - 1) == 1)
+            return n - 1;
+
+        // if the nth person knows id then, nth person can't be a celeb but id could be
+        else if (knows(M, n - 1, id) == 1)
+            return id;
+        // if there's no celeb
+        return -1;
+    }
+
+    int celebrity(int M[][], int n) {
+        // using recursion
+        int id = findCeleb(M, n);
+
+        // now check whether this id is really a celeb or not
+        if (id == -1)
+            return id;
+        else {
+            int outD = 0, inD = 0;
+            for (int i = 0; i < n; i++) {
+                if (i != id) {
+                    outD += knows(M, id, i);
+                    inD += knows(M, i, id);
+                }
+            }
+
+            if (outD == 0 && inD == n - 1)
+                return id;
+            return -1;
+        }
+    }
+}
