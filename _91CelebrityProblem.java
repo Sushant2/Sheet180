@@ -49,3 +49,38 @@ class Solution {
         return celeb;
     }
 }
+
+//Another approach - Using graphs - indegree & outdegree of a person
+//time comp - O(n^2)
+//space comp - O(n)
+
+class Solution
+{ 
+//Function to find if there is a celebrity in the party or not.
+int isIknowsJ(int[][] mat, int i, int j){
+    return mat[i][j];
+}
+int celebrity(int M[][], int n)
+{
+    // code here 
+    //using graph - but not need to construct it,as matrix will help in filling indegree & outdegree 
+    int[] indegree = new int[n];
+    int[] outdegree = new int[n];
+    
+    for(int i =0;i<n;i++){
+        for(int j=0;j<n;j++){
+            int x = isIknowsJ(M, i, j);
+            
+            indegree[j] += x;
+            outdegree[i] += x;
+            
+        }
+    }
+    //now celeb is - with indegree = n-1 & outdegree = 0
+    for(int i = 0;i<n;i++){
+        if(outdegree[i] == 0 && indegree[i] == n-1)
+            return i;
+    }
+    return -1;
+}
+}
