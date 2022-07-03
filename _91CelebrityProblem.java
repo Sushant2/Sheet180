@@ -50,45 +50,44 @@ class Solution {
     }
 }
 
-//Another approach - Using graphs - indegree & outdegree of a person
-//time comp - O(n^2)
-//space comp - O(n)
+// Another approach - Using graphs - indegree & outdegree of a person
+// time comp - O(n^2)
+// space comp - O(n)
 
-class Solution
-{ 
-//Function to find if there is a celebrity in the party or not.
-int isIknowsJ(int[][] mat, int i, int j){
-    return mat[i][j];
-}
-int celebrity(int M[][], int n)
-{
-    // code here 
-    //using graph - but not need to construct it,as matrix will help in filling indegree & outdegree 
-    int[] indegree = new int[n];
-    int[] outdegree = new int[n];
-    
-    for(int i =0;i<n;i++){
-        for(int j=0;j<n;j++){
-            int x = isIknowsJ(M, i, j);
-            
-            indegree[j] += x;
-            outdegree[i] += x;
-            
+class Solution {
+    // Function to find if there is a celebrity in the party or not.
+    int isIknowsJ(int[][] mat, int i, int j) {
+        return mat[i][j];
+    }
+
+    int celebrity(int M[][], int n) {
+        // code here
+        // using graph - but not need to construct it,as matrix will help in filling
+        // indegree & outdegree
+        int[] indegree = new int[n];
+        int[] outdegree = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                int x = isIknowsJ(M, i, j);
+
+                indegree[j] += x;
+                outdegree[i] += x;
+
+            }
         }
+        // now celeb is - with indegree = n-1 & outdegree = 0
+        for (int i = 0; i < n; i++) {
+            if (outdegree[i] == 0 && indegree[i] == n - 1)
+                return i;
+        }
+        return -1;
     }
-    //now celeb is - with indegree = n-1 & outdegree = 0
-    for(int i = 0;i<n;i++){
-        if(outdegree[i] == 0 && indegree[i] == n-1)
-            return i;
-    }
-    return -1;
-}
 }
 
-
-//Another Approach - using recursion
-//time comp - O(n)
-//space comp - O(1) & O(n) recursion stack space
+// Another Approach - using recursion
+// time comp - O(n)
+// space comp - O(1) & O(n) recursion stack space
 
 class Solution {
     // Function to find if there is a celebrity in the party or not.
@@ -138,5 +137,34 @@ class Solution {
                 return id;
             return -1;
         }
+    }
+}
+
+// Most optimal - using 2 pointers
+
+// time comp - O(n)
+// space comp - O(1)
+
+class Solution {
+    // Function to find if there is a celebrity in the party or not.
+int celebrity(int M[][], int n) {
+    // code here
+    // using 2 pointers
+    int i = 0, j = n - 1;
+    while (i < j) {
+        if (M[i][j] == 0)
+            j--;
+        else
+            i++;
+    }
+    int potCeleb = i;
+    // confirmation
+    for (int k = 0; k < n; k++) {
+        if (k != potCeleb) {
+            if (M[k][potCeleb] == 0 || M[potCeleb][k] == 1)
+                return -1;
+        }
+    }
+        return potCeleb;
     }
 }
