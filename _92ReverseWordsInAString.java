@@ -30,3 +30,15 @@ class Solution {
         return currWord.toString().trim();
     }
 }
+
+//Using java's Builtin functions
+
+class Solution {
+    public String reverseWords(String s) {
+        //using builtin java-methods
+        String[] words = s.trim().split(" +");
+        // "+" : means at least one, & " +" : means atleast one space
+        Collections.reverse(Arrays.asList(words));
+        return String.join(" ", words);
+    }
+}
