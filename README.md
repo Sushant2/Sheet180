@@ -118,7 +118,7 @@
   - [x] The Celebrity Problem
 
 - [ ] Strings
-  - [ ] Reverse Words In String
+  - [x] Reverse Words In String
   - [ ] Longest Palindrome in a string
   - [ ] Roman Number to Integer and vice versa
   - [ ] Roman Number to Integer and Vice versa
