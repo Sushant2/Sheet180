@@ -72,3 +72,33 @@ class Solution {
     }
 }
 
+
+//Pepcoding - diagonal-gap method
+//DP - bottom up
+
+class Solution {
+    public String longestPalindrome(String s) {
+        // bottom-up DP - tabulation
+        int len = s.length();
+        int start = 0, end = 0;
+        boolean[][] dp = new boolean[len][len];
+        for (int gap = 0; gap < len; gap++) {
+            for (int i = 0, j = gap; j < len; i++, j++) {
+                boolean flag = s.charAt(i) == s.charAt(j);
+                if (gap == 0)
+                    dp[i][j] = true;
+                else if (gap == 1)
+                    dp[i][j] = flag;
+                else {
+                    if (flag && dp[i + 1][j - 1] == true)
+                        dp[i][j] = true;
+                }
+                if (dp[i][j]) {
+                    start = i;
+                    end = j;
+                }
+            }
+        }
+        return s.substring(start, end + 1);
+    }
+}
