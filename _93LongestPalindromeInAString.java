@@ -3,6 +3,40 @@
 //Brute force - try out all possible substrings & check that substring is palindrome or not
 //time comp - O(n^3)
 
+//Using DP - Bottom Up
+//time comp - O(n^2)
+//space comp - O(n^2)
+
+class Solution {
+    public String longestPalindrome(String s) {
+        // uisng bottom-up DP
+        int start = 0, end = 0;
+        int len = s.length();
+        boolean[][] dp = new boolean[len][len];
+
+        for (int i = 0; i < len; i++) {
+            for (int j = i; j >= 0; j--) {
+                boolean flag = s.charAt(i) == s.charAt(j);
+                // for length 1
+                if (i == j)
+                    dp[i][j] = true;
+                // for length 2
+                else if (i - j == 1 && flag)
+                    dp[i][j] = true;
+                // check palindrome for rest sizes
+                // if "aba" is palindrome then "babab" is also palindorme
+                else if (flag && dp[i - 1][j + 1] == true)
+                    dp[i][j] = true;
+                if (dp[i][j] && i - j > end - start) {
+                    end = i;
+                    start = j;
+                }
+            }
+        }
+        return s.substring(start, end + 1);
+    }
+}
+
 
 //Optimization - O(n^2)
 //for every substring, we'll move to it's left & right while checking check palindrome & extend the substring this way
@@ -37,3 +71,4 @@ class Solution {
         }
     }
 }
+
