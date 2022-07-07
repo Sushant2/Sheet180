@@ -83,3 +83,36 @@ class Solution {
         return left.substring(0, min);
     }
 }
+
+//Another approach
+//using Binary Search
+//time comp - O((m*n)log(m))
+//space comp - O(1)
+
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0)
+            return "";
+        int minLen = Integer.MAX_VALUE;
+        for (String str : strs)
+            minLen = Math.min(minLen, str.length());
+        int low = 1;
+        int high = minLen;
+        while (low <= high) {
+            int mid = (low + high) >> 1;
+            if (isCommonPrefix(strs, mid))
+                low = mid + 1;
+            else
+                high = mid - 1;
+        }
+        return strs[0].substring(0, (low + high) >> 1);
+    }
+
+    private boolean isCommonPrefix(String[] strs, int len) {
+        String str1 = strs[0].substring(0, len);
+        for (int i = 1; i < strs.length; i++)
+            if (!strs[i].startsWith(str1))
+                return false;
+        return true;
+    }
+}
