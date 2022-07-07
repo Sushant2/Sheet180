@@ -26,3 +26,26 @@ class Solution {
         return prefix;
     }
 }
+
+//Approach 2 - Using Vertical scanning
+//time comp - O(m*n), where n equal strings, with length m
+//space comp - O(1)
+
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        // vertical scanning
+        // edge case
+        if (strs == null || strs.length == 0)
+            return "";
+        for (int i = 0; i < strs[0].length(); i++) {
+            char c = strs[0].charAt(i);
+            // for rest of the strings
+            for (int j = 1; j < strs.length; j++) {
+                // if size of current string is equal to i, no need to check for next columns
+                if (i == strs[j].length() || strs[j].charAt(i) != c)
+                    return strs[0].substring(0, i);
+            }
+        }
+        return strs[0];
+    }
+}
