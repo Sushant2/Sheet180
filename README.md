@@ -117,14 +117,14 @@
   - [x] Find the maximum of minimums of every window size
   - [x] The Celebrity Problem
 
-- [ ] Strings
+- [x] Strings
   - [x] Reverse Words In String
-  - [ ] Longest Palindrome in a string
-  - [ ] Roman Number to Integer and vice versa
-  - [ ] Roman Number to Integer and Vice versa
-  - [ ] Implement ATOI/STRSTR
-  - [ ] Longest Common Prefix
-  - [ ] Rabin Karp
+  - [x] Longest Palindrome in a string
+  - [x] Roman Number to Integer and vice versa
+  - [x] Roman Number to Integer and Vice versa
+  - [x] Implement ATOI/STRSTR
+  - [x] Longest Common Prefix
+  - [x] Rabin Karp
 
 - [ ] Strings Part-2
   - [ ] Z-Function
