@@ -86,3 +86,73 @@ class Solution {
         return -1;
     }
 }
+
+//Approach - 3
+// Using KMP ALgo
+//time comp - O(m+n)
+//space comp - O(m)
+
+class Solution {
+    public int repeatedStringMatch(String a, String b) {
+        int count = 1; // starting with one initially, as we creating result with one repetition
+                       // initially
+        StringBuilder res = new StringBuilder(a);
+        while (res.length() < b.length()) {
+            res.append(a);
+            count++;
+        }
+        if (KMPSearch(res.toString(), b) != -1)
+            return count;
+        // append one more time to cover all possible starting positions of b in a
+        res.append(a);
+        return (KMPSearch(res.toString(), b) == -1) ? -1 : count + 1;
+    }
+
+    private int KMPSearch(String txt, String pat) {
+        int m = pat.length();
+        int n = txt.length();
+
+        // longest proper prefix/suffix array
+        int[] lps = new int[m];
+
+        int j = 0; // index for pattern/pat
+        int i = 0; // index for text/txt
+
+        computeLPS(pat, m, lps);
+
+        // traverse the given string txt till the end
+        while (i < n) {
+            if (txt.charAt(i) == pat.charAt(j)) {
+                i++;
+                j++;
+            }
+            if (j == m) {
+                int ind = i - j;
+                j = lps[j - 1];
+                return ind;
+            } else if (i < n && txt.charAt(i) != pat.charAt(j)) {
+                if (j != 0)
+                    j = lps[j - 1];
+                else
+                    i++;
+            }
+        }
+        return -1;
+    }
+
+    private void computeLPS(String pat, int m, int[] lps) {
+        int i = 1, j = 0;
+        while (i < m) {
+            if (pat.charAt(i) == pat.charAt(j)) {
+                lps[i] = j + 1;
+                i++;
+                j++;
+            } else {
+                if (j != 0)
+                    j = lps[j - 1];
+                else
+                    i++;
+            }
+        }
+    }
+}
