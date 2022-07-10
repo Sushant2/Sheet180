@@ -96,3 +96,63 @@ class Solution {
         return KMPSearch(haystack, needle);
     }
 }
+
+//Approach - 3
+//Using Z-Algo
+//time comp - O(m+n)
+//space comp - O(m+n)
+
+class Solution {
+    private void computeZArr(String text, int[] ZArr, int len){
+        //[left, right] for a window - prefix of txt
+        int left = 0, right = 0;
+        //start from 1, ZArr[0] = 0, always - no match initally
+        for(int i = 1;i<len;i++){
+            //if i > right, nothing matches, so we'll calculate Z[i] using naive way
+            if(i>right){
+                left = right = i;
+                while(right < len && text.charAt(right - left) == text.charAt(right))
+                    right++;
+                ZArr[i] = right - left;
+                right--;
+            }
+            else{
+                //k = i-left, so "k" corresponds to number which matches in [left, right] interval
+                
+                int k = i - left;
+                //check if it doesn't touches right boundary // Z[k] + i < right + 1
+                if(ZArr[k] < right - i +1)
+                    ZArr[i] = ZArr[k];
+                else{
+                    //else start from right & check manually
+                    left = i;
+                    while(right < len && text.charAt(right - left) == text.charAt(right))
+                        right++;
+                    ZArr[i] = right - left;
+                    right--;
+                }
+            }
+        }
+        
+    }
+    private int ZAlgo(String text, String pat){
+        int patLen = pat.length();
+        String newText = pat + '$' + text;
+        int newLen = newText.length();
+        int[] ZArr = new int[newLen];
+        
+        computeZArr(newText, ZArr, newLen);
+        
+        for(int i = 0;i<newLen;i++){
+            if(ZArr[i] == patLen)
+                return i - patLen - 1;
+        }
+        return -1;
+    }
+    public int strStr(String haystack, String needle) {
+        if(needle.length() == 0)
+            return 0;
+        //using KMP algo
+        return ZAlgo(haystack, needle);
+    }
+}
