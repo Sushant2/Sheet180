@@ -126,13 +126,13 @@
   - [x] Longest Common Prefix
   - [x] Rabin Karp
 
-- [ ] Strings Part-2
-  - [ ] Z-Function
-  - [ ] KMP algo / LPS(pi) array
-  - [ ] Minimum characters needed to be inserted in the beginning to make it palindromic
-  - [ ] Check for Anagrams
-  - [ ] Count and Say
-  - [ ] Compare version numbers
+- [x] Strings Part-2
+  - [x] Z-Function
+  - [x] KMP algo / LPS(pi) array
+  - [x] Minimum characters needed to be inserted in the beginning to make it palindromic
+  - [x] Check for Anagrams
+  - [x] Count and Say
+  - [x] Compare version numbers
 
 - [ ] Binary Tree
   - [ ] Inorder Traversal
