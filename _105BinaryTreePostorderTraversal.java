@@ -88,3 +88,28 @@ class Solution {
         return ans;
     }
 }
+
+//using single stack & linkedlist
+
+//time comp - O(n)
+//space comp - O(n)
+
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        // using single stack & linked list
+        LinkedList<Integer> ans = new LinkedList<>();
+        if (root == null)
+            return ans;
+        Stack<TreeNode> stk = new Stack<>();
+        stk.push(root);
+        while (!stk.isEmpty()) {
+            TreeNode node = stk.pop();
+            ans.addFirst(node.val);
+            if (node.left != null)
+                stk.push(node.left);
+            if (node.right != null)
+                stk.push(node.right);
+        }
+        return ans;
+    }
+}
