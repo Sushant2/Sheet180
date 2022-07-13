@@ -49,3 +49,42 @@ class Solution {
         return ans;
     }
 }
+
+//Using Single Stack
+//time comp - O(2n)
+//space comp - O(n)
+
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        // using 1 stack
+        List<Integer> ans = new ArrayList<>();
+        if (root == null)
+            return ans;
+        Stack<TreeNode> stk = new Stack<>();
+        TreeNode curr = root;
+        while (curr != null || !stk.isEmpty()) {
+            // insert it & goto left
+            if (curr != null) {
+                stk.push(curr);
+                curr = curr.left;
+            } else {
+                // if it does't have left, goto right
+                TreeNode temp = stk.peek().right;
+                // if right also doesn't exist
+                if (temp == null) {
+                    // if not right
+                    temp = stk.pop();
+                    ans.add(temp.val);
+                    while (!stk.isEmpty() && temp == stk.peek().right) {
+                        temp = stk.pop();
+                        ans.add(temp.val);
+                    }
+                }
+                // if right exists
+                else
+                    curr = temp;
+            }
+        }
+        return ans;
+    }
+}
