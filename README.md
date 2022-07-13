@@ -135,14 +135,14 @@
   - [x] Compare version numbers
 
 - [ ] Binary Tree
-  - [ ] Inorder Traversal
-  - [ ] Preorder Traversal
-  - [ ] Postorder Traversal
-  - [ ] Morris Inorder Traversal
-  - [ ] Morris Preorder Traversal
-  - [ ] LeftView of Binary Tree
-  - [ ] Bottom View of Binary Tree
-  - [ ] Top View of Binary Tree
+  - [x] Inorder Traversal
+  - [x] Preorder Traversal
+  - [x] Postorder Traversal
+  - [x] Morris Inorder Traversal
+  - [x] Morris Preorder Traversal
+  - [x] LeftView of Binary Tree
+  - [x] Bottom View of Binary Tree
+  - [x] Top View of Binary Tree
   - [ ] Preorder inorder postorder in a single traversal
   - [ ] Vertical order traversal
   - [ ] Root to node path in a Binary Tree
