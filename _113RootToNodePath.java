@@ -37,3 +37,38 @@ public class Solution {
         return path;
     }
 }
+
+
+//Pepcoding - Node to root path
+
+class Solution {
+    private static boolean getPath(Node root, int target, ArrayList<Integer> list) {
+        if (root == null)
+            return false;
+        if (root.data == target){
+            list.add(root.data);
+            return true;
+        }
+        boolean left = getPath(root.left, target, list);
+        if (left) {
+            list.add(root.data);
+            return true;
+        }
+
+        boolean right = getPath(root.right, target, list);
+        if (right) {
+            list.add(root.data);
+            return true;
+        }
+        return false;
+    }
+
+    public static ArrayList<Integer> nodeToRoot(Node root, int target) {
+        // add your code here
+        ArrayList<Integer> ans = new ArrayList<>();
+        if (root == null)
+            return ans;
+        getPath(root, target, ans);
+        return ans;
+    }
+}
