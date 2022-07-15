@@ -29,3 +29,33 @@ class Solution {
         return dia;
     }
 }
+
+//Optimised Approach
+//time comp - O(n)
+//space comp - O(n) recursion stack space
+
+class Solution {
+    // optimised - O(N)
+    public int calcDia(TreeNode root, int[] maxDia) {
+        if (root == null)
+            return -1;
+        int leftH = calcDia(root.left, maxDia);
+        int rightH = calcDia(root.right, maxDia);
+
+        // calculate maxDia & height for curr node
+        int currDia = leftH + rightH + 2;
+        maxDia[0] = Math.max(maxDia[0], currDia);
+
+        // return height - cos parent node will need it
+        return Math.max(leftH, rightH) + 1;
+
+    }
+
+    public int diameterOfBinaryTree(TreeNode root) {
+        if (root == null)
+            return 0;
+        int[] maxDia = new int[1];
+        calcDia(root, maxDia);
+        return maxDia[0];
+    }
+}
