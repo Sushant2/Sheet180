@@ -44,3 +44,30 @@ class Solution {
 }
 
 
+//Using DFS
+//time comp - O(n)
+//space comp - O(n)
+
+class Solution {
+    public int widthOfBinaryTree(TreeNode root) {
+        return dfs(root, 0, 1, new ArrayList<>(), new ArrayList<>());
+    }
+
+    private int dfs(TreeNode root, int level, int idx, List<Integer> start, List<Integer> end) {
+        if (root == null)
+            return 0;
+
+        if (start.size() == level) {
+            start.add(idx);
+            end.add(idx);
+        } else {
+            end.set(level, idx);
+        }
+        idx -= start.get(level);
+        int currWidth = end.get(level) - start.get(level) + 1;
+        int left = dfs(root.left, level + 1, 2 * idx, start, end);
+        int right = dfs(root.right, level + 1, 2 * idx + 1, start, end);
+
+        return Math.max(currWidth, Math.max(left, right));
+    }
+}
