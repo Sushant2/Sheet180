@@ -1,9 +1,8 @@
 //Leetcode - 103 - Binary Tree Zigzag Level Order Traversal
 
-//Approach 1 
+//Approach 1 BFS + collections.reverse
 //time comp - O(n)
 //space comp - O(n)
-
 
 class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
@@ -39,7 +38,7 @@ class Solution {
     }
 }
 
-//using 2 stacks
+//Another approach - using 2 stacks
 //time comp - O(n)
 //space comp - O(n)
 
@@ -80,6 +79,41 @@ class Solution {
                 level++;
                 
             }
+        }
+        return ans;
+    }
+}
+
+//Another approach - suing linkedlist + BFS
+//time comp - O(n)
+//space comp - O(n)
+
+class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        // using BFS + linkedlist
+        List<List<Integer>> ans = new ArrayList<>();
+        if (root == null)
+            return ans;
+
+        Queue<TreeNode> q = new ArrayDeque<>();
+        q.add(root);
+        boolean leftToRight = false;
+        while (!q.isEmpty()) {
+            int size = q.size();
+            LinkedList<Integer> list = new LinkedList<>();
+            while (size-- > 0) {
+                TreeNode node = q.remove();
+                if (leftToRight)
+                    list.addFirst(node.val);
+                else
+                    list.add(node.val);
+                if (node.left != null)
+                    q.add(node.left);
+                if (node.right != null)
+                    q.add(node.right);
+            }
+            leftToRight = !leftToRight;
+            ans.add(list);
         }
         return ans;
     }
