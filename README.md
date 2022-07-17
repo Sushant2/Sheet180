@@ -143,20 +143,20 @@
   - [x] LeftView of Binary Tree
   - [x] Bottom View of Binary Tree
   - [x] Top View of Binary Tree
-  - [ ] Preorder inorder postorder in a single traversal
-  - [ ] Vertical order traversal
-  - [ ] Root to node path in a Binary Tree
-  - [ ] Max Width of a Binary Tree
+  - [x] Preorder inorder postorder in a single traversal
+  - [x] Vertical order traversal
+  - [x] Root to node path in a Binary Tree
+  - [x] Max Width of a Binary Tree
 
-- [ ] Binary Tree Part-2
-  - [ ] Level order Traversal/Level order traversal in spiral form
-  - [ ] Height of a Binary Tree
-  - [ ] Diameter of Binary Tree
-  - [ ] Check if the Binary tree is height balanced or not
-  - [ ] LCA in Binary Tree
-  - [ ] Check if two trees are identical or not
-  - [ ] Zig Zag Traversal of Bianry Tree
-  - [ ] Boundary Traversal of Binary Tree
+- [x] Binary Tree Part-2
+  - [x] Level order Traversal/Level order traversal in spiral form
+  - [x] Height of a Binary Tree
+  - [x] Diameter of Binary Tree
+  - [x] Check if the Binary tree is height balanced or not
+  - [x] LCA in Binary Tree
+  - [x] Check if two trees are identical or not
+  - [x] Zig Zag Traversal of Bianry Tree
+  - [x] Boundary Traversal of Binary Tree
 
 - [ ] Binary Tree part-3
   - [ ] Maximum Path sum
