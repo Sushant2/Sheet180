@@ -19,3 +19,29 @@ class Solution {
         node.right = temp;
     }
 }
+
+//Leetcode - 
+//using DFS 
+//time comp - O(n)
+//space comp - O(n)
+
+class Solution {
+    private void invertTreeUtil(TreeNode root) {
+        if (root == null)
+            return;
+
+        invertTreeUtil(root.left);
+        invertTreeUtil(root.right);
+
+        // swap
+        TreeNode temp = root.left;
+        root.left = root.right;
+        root.right = temp;
+    }
+
+    public TreeNode invertTree(TreeNode root) {
+        // using DFS
+        invertTreeUtil(root);
+        return root;
+    }
+}
