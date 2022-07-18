@@ -50,3 +50,25 @@ class Solution {
         }
     }
 }
+
+//Approach - 3 - Using intuition from morris traversal
+
+class Solution {
+    public void flatten(TreeNode root) {
+        // using morris traversal based intuition
+        TreeNode curr = root;
+        while (curr != null) {
+            if (curr.left != null) {
+                TreeNode prev = curr.left;
+                while (prev.right != null)
+                    prev = prev.right;
+
+                prev.right = curr.right;
+                curr.right = curr.left;
+
+                curr.left = null;
+            }
+            curr = curr.right;
+        }
+    }
+}
