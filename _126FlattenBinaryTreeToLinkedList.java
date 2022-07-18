@@ -53,6 +53,9 @@ class Solution {
 
 //Approach - 3 - Using intuition from morris traversal
 
+// time comp - O(n)
+//space comp - O(1)
+
 class Solution {
     public void flatten(TreeNode root) {
         // using morris traversal based intuition
