@@ -30,3 +30,27 @@ class Solution {
         return root;
     }
 }
+
+//Using DFS
+//time comp - O(n)
+//space comp - O(logn)
+//perfect BTree that's why O(logn)
+
+class Solution {
+    public Node connect(Node root) {
+        // using DFS
+        if (root == null)
+            return null;
+
+        Node leftChild = root.left, rightChild = root.right, nextNode = root.next;
+        if (leftChild != null) {
+            leftChild.next = rightChild;
+            if (nextNode != null) {
+                rightChild.next = nextNode.left;
+            }
+            connect(root.left);
+            connect(root.right);
+        }
+        return root;
+    }
+}
