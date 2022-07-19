@@ -54,3 +54,28 @@ class Solution {
         return root;
     }
 }
+
+
+//using BFS + DFS
+//time comp - O(n)
+//space comp - O(1)
+
+class Solution {
+    public Node connect(Node root) {
+        //using DFS + BFS - space optimised in O(1)
+        if(root == null)
+            return null;
+        Node head = root;
+        for(;root!=null;root = root.left){
+            for(Node curr = root;curr!=null;curr = curr.next){
+                if(curr.left!=null){
+                    curr.left.next = curr.right;
+                    if(curr.next!=null)
+                        curr.right.next = curr.next.left;
+                }else
+                    break;
+            }
+        }
+        return head;
+    }
+}
