@@ -1,5 +1,8 @@
 //Leetcode - 108 - Convert Sorted Array to Binary Search Tree
 
+//time comp - O(logn)
+//space comp - O(logn)
+
 class Solution {
     // do same as we do binary search
     private TreeNode construct(int[] nums, int low, int high) {
