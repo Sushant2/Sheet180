@@ -17,3 +17,16 @@ class Solution {
             return searchBST(root.right, val);
     }
 }
+
+
+class Solution {
+    public TreeNode searchBST(TreeNode root, int val) {
+        while (root != null && root.val != val) {
+            root = val < root.val ? root.left : root.right;
+
+            if (root == null)
+                break;
+        }
+        return root;
+    }
+}
