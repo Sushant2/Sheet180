@@ -52,3 +52,28 @@ class Solution {
     }
 }
 
+
+//Approach 3
+
+//time comp - O(n)
+//space comp - O(1)
+
+class Solution {
+    public boolean helper(TreeNode root, long lowerBound, long upperBound) {
+        if (root == null)
+            return true;
+
+        // if node lies out of range, return false
+        if (root.val >= upperBound || root.val <= lowerBound)
+            return false;
+
+        return helper(root.left, lowerBound, root.val) &&
+                helper(root.right, root.val, upperBound);
+    }
+
+    public boolean isValidBST(TreeNode root) {
+        // lowerBound upperBound
+        return helper(root, Long.MIN_VALUE, Long.MAX_VALUE);
+
+    }
+}
