@@ -158,19 +158,19 @@
   - [x] Zig Zag Traversal of Bianry Tree
   - [x] Boundary Traversal of Binary Tree
 
-- [ ] Binary Tree part-3
-  - [ ] Maximum Path sum
-  - [ ] Construct Binary Tree from inorder & preorder
-  - [ ] Construct Binary Tree from inorder & postorder
-  - [ ] Symmetric Binary Tree
-  - [ ] Flatten Binary Tree to LinkedList
-  - [ ] Check if Binary Tree is the mirror of itself or not
-  - [ ] Check for Children Sum Property
+- [x] Binary Tree part-3
+  - [x] Maximum Path sum
+  - [x] Construct Binary Tree from inorder & preorder
+  - [x] Construct Binary Tree from inorder & postorder
+  - [x] Symmetric Binary Tree
+  - [x] Flatten Binary Tree to LinkedList
+  - [x]  Check if Binary Tree is the mirror of itself or not
+  - [x] Check for Children Sum Property
 
 - [ ] Binary Search Tree
-  - [ ] Populate Next Right pointers of Tree
-  - [ ] Search given key in BST
-  - [ ] Construct BST from given keys
+  - [x] Populate Next Right pointers of Tree
+  - [x] Search given key in BST
+  - [x] Construct BST from given keys
   - [ ] Construct BST from preorder traversal
   - [ ] Check is a BT is BST or not
   - [ ] Find LCA of two nodes in BST
@@ -235,7 +235,7 @@
   - [ ] Palindrome Partitioning(MCM variation)
   - [ ] Maximum profit in Job scheduling
 
-- [] Trie
+- [ ] Trie
   - [ ] Implement Trie(prefix tree)
   - [ ] Implement Trie(preifx tree)
   - [ ] Longest String with all Prefixes
