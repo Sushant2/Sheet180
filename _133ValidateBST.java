@@ -26,3 +26,29 @@ class Solution {
         return true;
     }
 }
+
+
+//Approach 2
+//time comp - O(n)
+//space comp - O(1) + O(n) auxiliary stack space
+
+class Solution {
+    Integer prev = null;
+
+    public boolean isValidBST(TreeNode root) {
+        if (root == null)
+            return true;
+
+        boolean left = isValidBST(root.left);
+
+        if (prev != null && root.val <= prev)
+            return false;
+        else
+            prev = root.val;
+
+        boolean right = isValidBST(root.right);
+
+        return left && right;
+    }
+}
+
