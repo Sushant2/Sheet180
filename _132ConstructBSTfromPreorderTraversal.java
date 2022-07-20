@@ -75,3 +75,26 @@ class Solution {
                 inorder, 0, inorder.length - 1, inMap);
     }
 }
+
+
+//Most optimised approach
+//time comp - (3n) ~ O(n)
+//space comp - O(1)
+
+class Solution{
+
+private TreeNode helper(int[] preorder, int upperBound, int[] i) {
+    if (i[0] == preorder.length || preorder[i[0]] > upperBound)
+        return null;
+
+    TreeNode root = new TreeNode(preorder[i[0]++]);
+    root.left = helper(preorder, root.val, i);
+    root.right = helper(preorder, upperBound, i);
+
+    return root;
+}
+
+public TreeNode bstFromPreorder(int[] preorder) {
+    return helper(preorder, Integer.MAX_VALUE, new int[] { 0 });
+}
+}
