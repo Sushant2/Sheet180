@@ -31,3 +31,45 @@ class Solution {
         return inorder.get(k - 1);
     }
 }
+
+
+// Most optimised approach
+// using morris traversal
+
+// time comp - O(n)
+// space comp - O(1)
+
+class Solution {
+    public int kthSmallest(TreeNode root, int k) {
+        // using morris traversal
+        int ans = 0;
+        TreeNode curr = root;
+        while (curr != null) {
+            // if left does not exists
+            if (curr.left == null) {
+                k--;
+                if (k == 0)
+                    ans = curr.val;
+                curr = curr.right;
+            } else {
+                // if left exists, find inorder predecessor of the node
+                TreeNode iop = curr.left;
+                while (iop.right != null && iop.right != curr)
+                    iop = iop.right;
+
+                // if left is not processed
+                if (iop.right == null) {
+                    iop.right = curr;
+                    curr = curr.left;
+                } else {
+                    k--;
+                    if (k == 0)
+                        ans = curr.val;
+                    iop.right = null;
+                    curr = curr.right;
+                }
+            }
+        }
+        return ans;
+    }
+}
