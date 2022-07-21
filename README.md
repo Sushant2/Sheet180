@@ -167,14 +167,14 @@
   - [x]  Check if Binary Tree is the mirror of itself or not
   - [x] Check for Children Sum Property
 
-- [ ] Binary Search Tree
+- [x] Binary Search Tree
   - [x] Populate Next Right pointers of Tree
   - [x] Search given key in BST
   - [x] Construct BST from given keys
-  - [ ] Construct BST from preorder traversal
-  - [ ] Check is a BT is BST or not
-  - [ ] Find LCA of two nodes in BST
-  - [ ] Find the inorder predecessor/successor of a given key in BST.
+  - [x] Construct BST from preorder traversal
+  - [x] Check is a BT is BST or not
+  - [x] Find LCA of two nodes in BST
+  - [x] Find the inorder predecessor/successor of a given key in BST.
 
 - [ ] Binary Search Tree Part-2
   - [ ] Floor in a BST
