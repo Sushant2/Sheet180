@@ -73,3 +73,53 @@ class Solution {
         return ans;
     }
 }
+
+
+//Follow up - 
+//using Augmented Tree Data Structure - means maintain the rank of each node
+
+//time comp - O(h)
+//space comp - O(h)
+
+public class Node {
+    int val;
+    Node left, right;
+    int count;
+
+    Node(int val) {
+        this.val = val;
+        left = right = null;
+        this.count = 1;
+    }
+}
+
+class Solution {
+    Node newRoot;
+
+    public Node buildTree(TreeNode root) {
+        if (root == null)
+            return null;
+        Node newRoot = new Node(root.val);
+
+        newRoot.left = buildTree(root.left);
+        newRoot.right = buildTree(root.right);
+        newRoot.count += (newRoot.left == null) ? 0 : newRoot.left.count;
+        newRoot.count += (newRoot.right == null) ? 0 : newRoot.right.count;
+        return newRoot;
+    }
+
+    public Integer findKth(Node root, int k) {
+        int leftCount = root.left == null ? 0 : root.left.count;
+        if (k == leftCount + 1)
+            return root.val;
+        else if (k > leftCount + 1)
+            return findKth(root.right, k - leftCount - 1);
+        else
+            return findKth(root.left, k);
+    }
+
+    public int kthSmallest(TreeNode root, int k) {
+        Node node = buildTree(root);
+        return findKth(node, k);
+    }
+}
