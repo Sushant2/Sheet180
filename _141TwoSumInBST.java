@@ -45,3 +45,40 @@ class Solution {
         return findTargetUtil(root, root, k);
     }
 }
+
+
+//Better Approach
+//time comp - O(n)
+//space comp - O(n)
+
+class Solution {
+    private void getInorder(TreeNode root, ArrayList<Integer> inorder) {
+        if (root == null)
+            return;
+
+        getInorder(root.left, inorder);
+        inorder.add(root.val);
+        getInorder(root.right, inorder);
+    }
+
+    public boolean findTarget(TreeNode root, int k) {
+        // using better approach
+        if (root == null)
+            return false;
+        ArrayList<Integer> inorder = new ArrayList<>();
+        getInorder(root, inorder);
+
+        // now apply 2 pointer in sorted list
+        int low = 0, high = inorder.size() - 1;
+        while (low < high) {
+            int currSum = inorder.get(low) + inorder.get(high);
+            if (currSum == k)
+                return true;
+            else if (currSum < k)
+                low++;
+            else
+                high--;
+        }
+        return false;
+    }
+}
