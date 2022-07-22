@@ -32,3 +32,34 @@ class BSTIterator {
             return true;
     }
 }
+
+
+//using stack
+
+//time comp - O(1) on average
+//space comp - O(h)
+
+class BSTIterator {
+    private Stack<TreeNode> stk = new Stack<>();
+
+    private void pushAll(TreeNode root) {
+        while (root != null) {
+            stk.push(root);
+            root = root.left;
+        }
+    }
+
+    public BSTIterator(TreeNode root) {
+        pushAll(root);
+    }
+
+    public int next() {
+        TreeNode top = stk.pop();
+        pushAll(top.right);
+        return top.val;
+    }
+
+    public boolean hasNext() {
+        return !stk.isEmpty();
+    }
+}
