@@ -82,3 +82,69 @@ class Solution {
         return false;
     }
 }
+
+
+//Most Optimised Code
+
+//time comp - O(n)
+//space comp - O(h)
+
+public class BSTIterator {
+    private Stack<TreeNode> stk = new Stack<>();
+    // reverse (true => before() iterator) / (false => next() iterator)
+    boolean reverse = true;
+
+    public BSTIterator(TreeNode root, boolean isReverse) {
+        reverse = isReverse;
+        pushAll(root);
+    }
+
+    // return whether we've next number or not
+    public boolean hashNext() {
+        return !stk.isEmpty();
+    }
+
+    // return the next number
+    public int next() {
+        TreeNode node = stk.pop();
+        if (reverse == false)
+            pushAll(node.right);
+        else
+            pushAll(node.left);
+        return node.val;
+    }
+
+    private void pushAll(TreeNode node) {
+        while (node != null) {
+            stk.push(node);
+            if (reverse == false)
+                node = node.left;
+            else
+                node = node.right;
+        }
+    }
+
+}
+
+class Solution {
+    public boolean findTarget(TreeNode root, int k) {
+        // most optimized
+        if (root == null)
+            return false;
+        BSTIterator nextObj = new BSTIterator(root, false);
+        BSTIterator beforeObj = new BSTIterator(root, true);
+
+        int i = nextObj.next();
+        int j = beforeObj.next(); // we avoiding creating before(),
+
+        while (i < j) {
+            if (i + j == k)
+                return true;
+            if (i + j < k)
+                i = nextObj.next();
+            else
+                j = beforeObj.next();
+        }
+        return false;
+    }
+}
