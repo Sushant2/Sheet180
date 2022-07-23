@@ -176,15 +176,15 @@
   - [x] Find LCA of two nodes in BST
   - [x] Find the inorder predecessor/successor of a given key in BST.
 
-- [ ] Binary Search Tree Part-2
-  - [ ] Floor in a BST
-  - [ ] Ceil in a BST
-  - [ ] Find k-th smallest element in BST
-  - [ ] Find K-th largest element in BST
-  - [ ] Find a pair with a given sum in BST
-  - [ ] BST iterator
-  - [ ] Size of the largest BST in a BIanry Tree
-  - [ ] Serialize and deserialize Binary Tree
+- [x] Binary Search Tree Part-2
+  - [x] Floor in a BST
+  - [x]  Ceil in a BST
+  - [x] Find k-th smallest element in BST
+  - [x] Find K-th largest element in BST
+  - [x] Find a pair with a given sum in BST
+  - [x] BST iterator
+  - [x] Size of the largest BST in a BIanry Tree
+  - [x] Serialize and deserialize Binary Tree
 
 - [ ] Binary Tree(Misc)
   - [ ] Binary tree to double Linked List
