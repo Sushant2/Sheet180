@@ -14,7 +14,7 @@
 //space comp - O(1)
 
 class Solution {
-    int maxSum = 0;
+    int maxSize = 0;
 
     class NodeValue {
         int minNode, maxNode, sum;
@@ -40,7 +40,7 @@ class Solution {
             main.minNode = Math.min(root.val, Math.min(left.minNode, right.minNode));
             main.maxNode = Math.max(root.val, Math.max(left.maxNode, right.maxNode));
             main.sum = root.val + left.sum + right.sum;
-            maxSum = Math.max(maxSum, main.sum);
+            maxSize = Math.max(maxSize, main.sum);
         }
         // otherwise return [-inf, inf] so that parent can't be valid BST
         else {
@@ -51,10 +51,56 @@ class Solution {
         return main;
     }
 
-    public int maxSumBST(TreeNode root) {
+    public int maxSizeBST(TreeNode root) {
         NodeValue ans = new NodeValue();
         ans = largestBSTSubtreeHelper(root);
-        return maxSum > 0 ? maxSum : 0;
+        return maxSize > 0 ? maxSize : 0;
+
+    }
+}
+
+
+//with slight modification we can do -
+// maximum size BST in Binary Tree
+
+class NodeValue {
+    public int maxNode, minNode, maxSize;
+
+    NodeValue(int minNode, int maxNode, int maxSize) {
+        this.maxNode = maxNode;
+        this.minNode = minNode;
+        this.maxSize = maxSize;
+    }
+}
+
+class Solution {
+    private NodeValue largestBSTSubtreeHelper(TreeNode root) {
+        // an empty tree is a BST of size 0
+        if (root == null)
+            return new NodeValue(Integer.MAX_VALUE, Integer.MIN_VALUE, 0);
+
+        // get value from left & right subtree of curremt tree
+        NodeValue left = largestBSTSubtreeHelper(root.left);
+        NodeValue right = largestBSTSubtreeHelper(root.right);
+
+        // current node is greater than max in left & smaller than min in right
+        if (left.maxNode < root.val && root.val < right.minNode) {
+            return new NodeValue(Math.min(root.val, left.minNode),
+                    Math.max(root.val, right.maxNode),
+                    left.maxSize + right.maxSize + 1);
+        }
+
+        // otherwise return [-inf, inf] so that parent can't be valid BST
+
+        return new NodeValue(Integer.MIN_VALUE,
+                Integer.MAX_VALUE,
+                Math.max(left.maxSize, right.maxSize));
+    }
+
+    public int maxSizeBST(TreeNode root) {
+        if (largestBSTSubtreeHelper(root).maxSize < 0)
+            return 0;
+        return largestBSTSubtreeHelper(root).maxSize;
 
     }
 }
