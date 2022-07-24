@@ -186,13 +186,13 @@
   - [x] Size of the largest BST in a BIanry Tree
   - [x] Serialize and deserialize Binary Tree
 
-- [ ] Binary Tree(Misc)
-  - [ ] Binary tree to double Linked List
-  - [ ] Find Median in a stream of running integers
-  - [ ] K-th largest element in a stream
-  - [ ] Distinct numbers in window
-  - [ ] K-th largest element in an unsorted array
-  - [ ] Flood-fill algorithm
+- [x] Binary Tree(Misc)
+  - [x] Binary tree to double Linked List
+  - [x] Find Median in a stream of running integers
+  - [x] K-th largest element in a stream
+  - [x] Distinct numbers in window
+  - [x] K-th largest element in an unsorted array
+  - [] Flood-fill algorithm
 
 - [ ] Graph
   - [ ] Clone a graph(Not that easy as it looks)
