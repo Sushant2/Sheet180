@@ -1,5 +1,37 @@
 //GFG/Pepcoding/COding Ninjas - Count Distinct Elements In Every Window
 
+//Naive approach
+//time comp - O(n*k^2)
+//space comp - O(1)
+
+class Solution {
+    private static int countDUtil(int[] window, int k) {
+        int distCount = 0;
+        // traverse the window
+        for (int i = 0; i < k; i++) {
+            int j;
+            for (j = 0; j < i; j++) {
+                if (window[i] == window[j])
+                    break;
+            }
+            if (j == i)
+                distCount++;
+        }
+        return distCount;
+    }
+
+    ArrayList<Integer> countDistinct(int A[], int n, int k) {
+        // code here
+        // brute force
+        ArrayList<Integer> ans = new ArrayList<>();
+        for (int i = 0; i <= n - k; i++) {
+            ans.add(countDUtil(Arrays.copyOfRange(A, i, n), k));
+        }
+        return ans;
+    }
+}
+
+//Optimised Approach
 //time comp - O(n)
 //space comp - O(n)
 
