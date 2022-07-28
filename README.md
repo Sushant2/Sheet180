@@ -201,7 +201,7 @@
   - [ ] Detect A cycle in Undirected Graph uisng BFS
   - [ ] Detect A cycle in Undirected graph using DFS
   - [ ] Detect A cycle in Directed graph using DFS
-  - [ ] Detect A cycle in Directed graph uisng BFS
+  - [ ] Detect A cycle in Directed graph using BFS
   - [ ] Topological Sort BFS
   - [ ] Number of islands(Do in Grid and graph Both)
   - [ ] Bipartitie Check using BFS
