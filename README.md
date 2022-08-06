@@ -196,10 +196,10 @@
 
 - [ ] Graph
   - [ ] Clone a graph(Not that easy as it looks)
-  - [ ] DFS
-  - [ ] BFS
-  - [ ] Detect A cycle in Undirected Graph uisng BFS
-  - [ ] Detect A cycle in Undirected graph using DFS
+  - [x] DFS
+  - [x] BFS
+  - [x] Detect A cycle in Undirected Graph uisng BFS
+  - [x] Detect A cycle in Undirected graph using DFS
   - [ ] Detect A cycle in Directed graph using DFS
   - [ ] Detect A cycle in Directed graph using BFS
   - [ ] Topological Sort BFS
