@@ -1,5 +1,9 @@
 //GFG - Detect a cycle in undirected graph using DFS
 
+//time comp - O(n + e) : n for nodes + e for edges
+//space comp - O(n+e) : O(n) + O(n)
+//adjacency list + recursion stack space + vis array
+
 class Solution {
     // Function to detect cycle in an undirected graph.
     private boolean checkCycle(int node, int prev, boolean[] vis, ArrayList<ArrayList<Integer>> adj){
