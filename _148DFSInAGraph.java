@@ -2,7 +2,7 @@
 
 //time comp - O(n+e) ; n - nodes & e - for travelling through adjacent nodes overall(edges)
 //space comp - O(n+e) + O(n) + O(n)
-//adjacency list + visited array + queue
+//adjacency list + visited array + recursion stack space
 
 class Solution {
     // Function to return a list containing the DFS traversal of the graph.
