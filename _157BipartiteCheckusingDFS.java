@@ -1,5 +1,9 @@
 //leetcode - 785 - is Graph Bipartite?
 
+//time comp - O(n + e) : n for nodes + e for edges
+//space comp - O(n+e) : O(n) + O(n)
+//adjacency list + recursion stack space + color array
+
 class Solution {
     private boolean checkBipartite(int node, int[] color, int[][] graph){
         if(color[node] == -1)
