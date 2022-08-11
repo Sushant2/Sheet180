@@ -1,5 +1,9 @@
 //leetcode - is bipartite graph?
 
+//time comp - O(n + e) : n for nodes + e for edges
+//space comp - O(n+e) : O(n) + O(n)
+//adjacency list + queue + color array
+
 class Solution {
     private boolean checkBipartite(int node, int[] color, int[][] graph){
         Queue<Integer> q = new ArrayDeque<>();
