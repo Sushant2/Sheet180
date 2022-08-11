@@ -200,12 +200,13 @@
   - [x] BFS
   - [x] Detect A cycle in Undirected Graph uisng BFS
   - [x] Detect A cycle in Undirected graph using DFS
-  - [ ] Detect A cycle in Directed graph using DFS
+  - [x] Detect A cycle in Directed graph using DFS
   - [ ] Detect A cycle in Directed graph using BFS
+  - [ ] Topological Sort DFS
   - [ ] Topological Sort BFS
   - [ ] Number of islands(Do in Grid and graph Both)
-  - [ ] Bipartitie Check using BFS
-  - [ ] Bipartite Check using DFS
+  - [x] Bipartitie Check using BFS
+  - [x] Bipartite Check using DFS
 
 - [ ] Graph Part-2
   - [ ] Strongly Connected Component(using Kosaraju's algo)
