@@ -57,6 +57,47 @@ class Solution {
     }
 }
 
+
+//using DFS
+class Solution {
+ private void dfsTrav(int r, int c, char[][] grid, boolean[][] vis){
+        int m = grid.length;
+        int n = grid[0].length;
+        vis[r][c] = true;
+        if(r-1 >= 0 && grid[r-1][c] == '1' && vis[r-1][c] == false){
+            vis[r-1][c] = true;
+            dfsTrav(r-1, c, grid, vis);
+        }if(c + 1<n && grid[r][c+1] == '1' && vis[r][c+1] == false){
+            vis[r][c+1] = true;
+            dfsTrav(r, c+1, grid, vis);
+        }if(r+1 < m && grid[r+1][c] == '1' && vis[r+1][c] == false){
+            vis[r+1][c] = true;
+            dfsTrav(r+1, c, grid, vis);
+        }if(c-1 >= 0 && grid[r][c-1]=='1' && vis[r][c-1] == false){
+            vis[r][c-1] = true;
+            dfsTrav(r, c-1, grid, vis);
+        }
+    }
+    public int numIslands(char[][] grid) {
+          // Code here
+        int m = grid.length;
+        int n = grid[0].length;
+        
+        //visited 2d array
+        boolean[][] vis = new boolean[m][n];
+        int countIslands = 0;
+        for(int i = 0;i<m;i++){
+            for(int j = 0;j<n;j++){
+                if(grid[i][j] == '1' && vis[i][j] == false){
+                    countIslands++;
+                    dfsTrav(i, j, grid, vis);
+                }
+            }
+        }
+        return countIslands;
+    }
+}
+
 //GFG - Find the number of islands
 
 // time comp : O(n^2)
@@ -115,3 +156,41 @@ class Solution {
         return countIslands;
     }
 }
+
+//using DFS
+
+class Solution {
+    // Function to find the number of islands.
+    private void dfsTrav(int i, int j, char[][] grid, boolean[][] vis){
+        int m = grid.length;
+        int n = grid[0].length;
+        vis[i][j] = true;
+        for(int di = -1;di<=1;di++){
+            for(int dj = -1;dj<=1;dj++){
+                int nr = i + di;
+                int nc = j + dj;
+                if(nr >= 0 && nr < m && nc >= 0 && nc < n && grid[nr][nc] == '1' && vis[nr][nc] == false ){
+                    vis[nr][nc] = true;
+                    dfsTrav(nr, nc, grid, vis);
+                }
+            }
+            }
+    }
+    public int numIslands(char[][] grid) {
+        // Code here
+        int m = grid.length;
+        int n = grid[0].length;
+        
+        //visited 2d array
+        boolean[][] vis = new boolean[m][n];
+        int countIslands = 0;
+        for(int i = 0;i<m;i++){
+            for(int j = 0;j<n;j++){
+                if(grid[i][j] == '1' && vis[i][j] == false){
+                    countIslands++;
+                    dfsTrav(i, j, grid, vis);
+                }
+            }
+        }
+        return countIslands;
+    }
