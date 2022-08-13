@@ -194,17 +194,17 @@
   - [x] K-th largest element in an unsorted array
   - [x] Flood-fill algorithm
 
-- [ ] Graph
-  - [ ] Clone a graph(Not that easy as it looks)
+- [x] Graph
+  - [x] Clone a graph(Not that easy as it looks)
   - [x] DFS
   - [x] BFS
   - [x] Detect A cycle in Undirected Graph uisng BFS
   - [x] Detect A cycle in Undirected graph using DFS
   - [x] Detect A cycle in Directed graph using DFS
-  - [ ] Detect A cycle in Directed graph using BFS
-  - [ ] Topological Sort DFS
-  - [ ] Topological Sort BFS
-  - [ ] Number of islands(Do in Grid and graph Both)
+  - [x] Detect A cycle in Directed graph using BFS
+  - [x] Topological Sort DFS
+  - [x] Topological Sort BFS
+  - [x] Number of islands(Do in Grid and graph Both)
   - [x] Bipartitie Check using BFS
   - [x] Bipartite Check using DFS
 
