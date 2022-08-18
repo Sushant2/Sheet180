@@ -238,7 +238,7 @@
 
 - [ ] Trie
   - [ ] Implement Trie(prefix tree)
-  - [ ] Implement Trie(preifx tree)
+  - [ ] Implement Trie-2(preifx tree)
   - [ ] Longest String with all Prefixes
   - [ ] Number of Distinct Substrings in a String
   - [ ] Power Set(this is very important)
