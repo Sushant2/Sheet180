@@ -210,11 +210,11 @@
 
 - [ ] Graph Part-2
   - [ ] Strongly Connected Component(using Kosaraju's algo)
-  - [ ] Dijkstra's Algorithm
+  - [x] Dijkstra's Algorithm
   - [ ] Bellman-Ford Algo
   - [ ] Floyd Warshall Algorithm
-  - [ ] MST using Prim's Algo
-  - [ ] MST using Krushkal's Algo
+  - [x] MST using Prim's Algo
+  - [x] MST using Krushkal's Algo
 
 
 - [ ] Dynamic Programming
