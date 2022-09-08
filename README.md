@@ -208,11 +208,11 @@
   - [x] Bipartitie Check using BFS
   - [x] Bipartite Check using DFS
 
-- [ ] Graph Part-2
-  - [ ] Strongly Connected Component(using Kosaraju's algo)
+- [x] Graph Part-2
+  - [x] Strongly Connected Component(using Kosaraju's algo)
   - [x] Dijkstra's Algorithm
-  - [ ] Bellman-Ford Algo
-  - [ ] Floyd Warshall Algorithm
+  - [x] Bellman-Ford Algo
+  - [x] Floyd Warshall Algorithm
   - [x] MST using Prim's Algo
   - [x] MST using Krushkal's Algo
 
