@@ -1,3 +1,8 @@
+//GFG -  Strongly Connected Components (Kosaraju's Algo)
+
+//time comp - O(V+E)
+//space comp - O(V)
+
 class Solution
 {
     //Function to find number of strongly connected components in the graph.
